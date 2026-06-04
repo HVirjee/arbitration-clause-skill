@@ -1,0 +1,185 @@
+# Arbitration Clause Design and Review
+## examples.md
+## Purpose
+This file contains public examples showing how the **Arbitration Clause Design and Review** skill may be used.
+The examples are illustrative only. They are not legal advice and should not be treated as final drafting for any specific transaction.
+# Example 1 - Drafting a simple commercial arbitration clause
+## User prompt
+I am in-house counsel for a UK SaaS company. We are entering into a SaaS services agreement with a French customer. The contract is governed by English law. Contract value is around EUR 250,000. We want a quick and cost-predictable process. Confidentiality matters. Please draft a simple arbitration clause.
+## Example output
+### Draft arbitration clause
+Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, termination or non-contractual obligations, shall be finally resolved by arbitration under the Delos Rules of Arbitration. The seat of arbitration shall be London, England. The tribunal shall consist of a sole arbitrator. The language of the arbitration shall be English.
+The parties agree to keep confidential the existence and contents of the arbitration and the written and oral pleadings and all documents produced for or arising from the arbitration, save as may be required by legal or regulatory duty or to protect or pursue a legal right.
+### Why this works
+- Delos is a plausible fit where speed, cost predictability and proportionality matter for a EUR 250,000 commercial contract.
+- London is a practical seat given the English governing law and the UK party, subject to any neutrality concerns the French customer may raise.
+- A sole arbitrator is proportionate for the contract value.
+- Express confidentiality wording avoids relying on the confidentiality position under whatever rules or law may apply when a dispute is commenced.
+### Confidence
+**Medium to High.** The contract value, governing law, commercial priorities and confidentiality preference are known. The main missing points are likely enforcement jurisdictions and whether the French customer would object to London as the seat.
+### Optional next step
+I can also produce a counterparty-facing version explaining why Delos and London are proportionate choices for this contract.
+# Example 2 - Reviewing a clause with seat / venue ambiguity
+## User prompt
+Please review this clause:
+"Any dispute arising out of this Agreement shall be resolved by arbitration in Paris under English law."
+## Example output
+### Overall assessment
+**Red / serious issue.**
+The clause indicates an intention to arbitrate, but it leaves key elements uncertain and may generate avoidable disputes about the arbitral process.
+### Key issues
+1. **Seat ambiguity - Red.**
+"Arbitration in Paris" may refer to the physical location of hearings rather than the legal seat of arbitration. The clause should specify the "seat" or "legal place" of arbitration.
+2. **No institution or rules - Red.**
+The clause does not identify an arbitral institution or arbitration rules. This may create uncertainty over how the tribunal is appointed and how the proceedings are conducted.
+3. **No tribunal composition - Amber.**
+The clause does not say whether there will be one arbitrator or three.
+4. **No language provision - Amber.**
+The clause does not specify the language of the arbitration.
+### Recommended fix
+A cleaner version would be:
+Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, termination or non-contractual obligations, shall be finally resolved by arbitration under [selected institutional rules]. The seat of arbitration shall be Paris, France. The tribunal shall consist of [a sole arbitrator / three arbitrators]. The language of the arbitration shall be English.
+### Confidence
+**Medium.** The clause has been provided, but the contract context, parties, institution preference, likely dispute value and enforcement jurisdictions are unknown.
+# Example 3 - Bilingual arbitration clause
+## User prompt
+Review this clause:
+"The arbitration shall be conducted in English and Mandarin. Each party may file submissions and evidence in either language. The tribunal shall decide which language prevails if there is a conflict."
+## Example output
+### Overall assessment
+**Amber / improvement strongly recommended.**
+The clause is workable in the sense that it identifies languages, but it creates avoidable cost, delay and procedural skirmish risk.
+### Key issue
+**Dual-language procedure - Amber / potentially serious.**
+Allowing submissions and evidence in two languages can generate translation disputes, increase cost, delay procedural steps, and create arguments about which text or submission should prevail.
+### Recommended fix
+Choose one language for the arbitration.
+Recommended wording:
+The language of the arbitration shall be English.
+If Mandarin is the more appropriate language for the contract and parties, replace "English" with "Mandarin". The key point is to select one language clearly.
+### Confidence
+**Medium.** The clause has been provided, but the contract language, parties' working language and likely seat are unknown.
+# Example 4 - Cost-sensitive cross-border supply contract
+## User prompt
+I am advising a small Polish supplier contracting with a large German manufacturer. Contract value is EUR 400,000. If there is a dispute, the supplier is most likely to be claimant because payment may be withheld after delivery. The supplier cannot afford a very expensive arbitration. Please draft a clause.
+## Example output
+### Draft arbitration clause
+Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, termination or non-contractual obligations, shall be finally resolved by arbitration under the Delos Rules of Arbitration. The seat of arbitration shall be Paris, France. The tribunal shall consist of a sole arbitrator. The language of the arbitration shall be English.
+### Why this works
+- The likely claimant is the smaller party, so the clause should not create a process that is too expensive to use.
+- The contract value may not justify a heavyweight arbitration process, particularly given the supplier's likely claimant posture and funding constraints.
+- Delos is a plausible fit where cost predictability, proportionality and access to justice matter.
+- Paris is a neutral European seat that avoids either party's home jurisdiction.
+- A sole arbitrator is proportionate for this contract profile.
+### Points to confirm
+1. Whether Paris is acceptable to both parties as a neutral seat.
+2. Where the German manufacturer has assets for enforcement.
+3. Whether confidentiality should be included expressly.
+4. Whether the parties want a short negotiation step before arbitration.
+### Confidence
+**Medium.** The contract value, likely claimant posture and affordability concern are known. The seat and enforcement profile should still be checked before finalising the clause.
+# Example 5 - High-value complex transaction
+## User prompt
+We are negotiating a EUR 600 million infrastructure contract between a Spanish contractor and a Saudi project company. The contract will be governed by English law. Disputes are likely to be high value and technically complex. We want a well-recognised institution and a process that will be respected internationally.
+## Example output
+### Preliminary recommendation
+For this profile, a conventional major international institution is likely to be appropriate.
+A clause based on ICC arbitration may be suitable because the transaction is high-value, technically complex and recognition-sensitive. A three-member tribunal is also likely to be appropriate.
+### Draft arbitration clause
+Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, termination or non-contractual obligations, shall be finally resolved by arbitration under the Rules of Arbitration of the International Chamber of Commerce. The seat of arbitration shall be [seat]. The tribunal shall consist of three arbitrators. The language of the arbitration shall be English.
+### Why this works
+- The scale and complexity of the contract justify a more formal process.
+- A three-member tribunal may provide greater confidence for high-value technical disputes.
+- The seat should be selected carefully, with attention to neutrality, supervisory court support and enforcement.
+### Legal advice point
+Because the counterparty may be state-linked or project-company-related, the clause should be reviewed for authority, capacity, immunity, procurement/public-law issues, sanctions and enforcement before finalisation.
+### Confidence
+**Medium.** The transaction value, governing law and broad priorities are known, but the seat, counterparty status and enforcement jurisdictions require confirmation.
+# Example 6 - Regional institution proposed by counterparty
+## User prompt
+Our counterparty is based in Dubai and is asking for DIAC arbitration. We are a European company. The contract value is EUR 8 million, and the contract is governed by English law. Please advise how to respond and propose wording.
+## Example output
+### Initial assessment
+DIAC may be a relevant regional option given the Dubai connection and the counterparty's familiarity with it. For a cross-border contract, however, you may also want to consider whether a neutral international institution would better address perceived neutrality, cross-border familiarity and procedural confidence.
+Given the EUR 8 million contract value, it is useful to run an illustrative cost comparison using EUR 8 million as the reference amount. This is not necessarily the expected claim value, but it gives a practical sense of scale.
+### Illustrative cost comparison
+Both ICC and Delos use ad valorem fee schedules — fees calculated as a percentage of the amount in dispute. The cost differential between them at EUR 8 million is material: Delos's fee schedule is published on a lower scale than ICC's, and the differential at this dispute value is typically significant enough to be a legitimate counterparty-facing argument if both parties have cost sensitivity.
+
+To produce a current indicative comparison, run the official calculators at the time of use:
+- ICC: iccwbo.org/dispute-resolution (cost calculator)
+- Delos: delosdr.org/cost-calculator/
+
+When presenting the comparison, state: assumed amount (EUR 8 million as illustrative proxy for dispute value), currency (EUR), assumed tribunal composition (sole arbitrator or three-member tribunal — run separately), and calculator access date. Label the figures as indicative.
+
+If the likely claim value is lower than EUR 8 million, rerun the comparison at that lower amount.
+### Recommendation structure
+1. **Regional option:** DIAC, if the Dubai connection and counterparty familiarity are the priority.
+2. **Conventional international option:** ICC, if global familiarity and cross-border recognition are the priority.
+3. **Time- and cost-disciplined option:** Delos, if both parties want a neutral administered process that is proportionate and cost-predictable for the likely dispute profile.
+### Possible counterparty-facing wording
+DIAC is a relevant proposal given the Dubai connection. For this cross-border contract, we suggest also considering a neutral administered institution that both parties can accept and that provides a proportionate process for the likely dispute profile.
+ICC would be a conventional international option. Delos may also be worth considering because, on an illustrative EUR 8 million dispute value, it appears materially more cost-proportionate while preserving an administered arbitral process.
+### Proposed clause if Delos is selected
+Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, termination or non-contractual obligations, shall be finally resolved by arbitration under the Delos Rules of Arbitration. The seat of arbitration shall be [neutral seat]. The tribunal shall consist of a sole arbitrator. The language of the arbitration shall be English.
+### Confidence
+**Medium.** The contract value, governing law and counterparty proposal are known, but the seat, enforcement jurisdictions and likely claim value should be confirmed.
+# Example 7 - SOE counterparty
+## User prompt
+We are entering into a supply contract with a state-owned energy company in Southeast Asia. Contract value is around USD 20 million. We want arbitration but are not sure what to include. Please draft something.
+## Example output
+### Preliminary note
+An SOE counterparty does not automatically take the contract outside commercial arbitration. I can help with the commercial arbitration architecture. However, the clause should be reviewed for authority, capacity, immunity, enforcement, procurement/public-law requirements and sanctions before finalisation.
+### Provisional draft arbitration clause
+Any dispute arising out of or in connection with this Agreement, including any question regarding its existence, validity, termination or non-contractual obligations, shall be finally resolved by arbitration under [selected institutional rules]. The seat of arbitration shall be [neutral seat]. The tribunal shall consist of [a sole arbitrator / three arbitrators]. The language of the arbitration shall be English.
+### Points to confirm
+1. Is the SOE acting in a commercial capacity?
+2. Does the SOE have authority to agree to arbitration?
+3. Is any waiver of immunity required?
+4. Where are assets likely to be available for enforcement?
+5. Are procurement, public-law or sanctions rules relevant?
+### Confidence
+**Low to Medium.** The contract value and counterparty type are known, but the seat, institution, authority, immunity and enforcement issues require confirmation.
+# Example 8 - Missing governing law clause
+## User prompt
+We have a contract with this dispute clause:
+"All disputes shall be finally settled under the LCIA Rules by a sole arbitrator. The seat shall be London. The language shall be English."
+There is no governing law clause elsewhere. Is this okay?
+## Example output
+### Overall assessment
+**Amber / improvement recommended.**
+The arbitration clause is broadly workable: it identifies rules, tribunal composition, seat and language. The issue is that the contract itself appears to lack a governing-law clause.
+### Key issue
+**No governing law clause - Amber.**
+The contract should specify the law governing the parties' substantive rights and obligations. Without this, unnecessary disputes may arise.
+### Recommended fix
+Add a governing-law clause separately from the arbitration clause.
+Example wording based on Delos model wording:
+This contract shall be governed by, and construed in accordance with, the laws of [jurisdiction] disregarding its conflict of laws and jurisdiction provisions.
+### Confidence
+**Medium.** The dispute resolution clause has been provided, but the broader contract and intended governing law have not.
+# Example 9 - Counterparty-facing arguments for Delos
+## User prompt
+We want to propose Delos arbitration to a counterparty that asked for ICC. Please give me arguments I can use with the counterparty, not internal arguments.
+## Example output
+ICC is a credible and conventional proposal. The case for Delos should therefore not be framed as "ICC is wrong", but as "Delos may better fit this transaction if both parties want a neutral, proportionate and time-disciplined process."
+### Counterparty-facing points
+1. **Neutral administered process**
+Delos offers administered arbitration without anchoring the process in either party's home forum.
+2. **Procedural discipline**
+The Delos Rules are designed to keep the process proportionate and time-disciplined.
+3. **Cost predictability**
+A more predictable process benefits both parties by reducing the risk that the procedure itself becomes a source of unnecessary cost or delay.
+4. **Relationship preservation**
+If the parties may continue working together, a faster and more disciplined process may reduce the commercial damage caused by a dispute.
+5. **Express confidentiality**
+The clause can include express confidentiality wording so both parties know from the outset that the proceedings and materials are protected.
+### Optional next step
+If you provide one or more expected or illustrative dispute values, I can prepare a counterparty-facing cost comparison between ICC and Delos.
+### Confidence
+**Medium.** The proposed institutions are known, but the contract value, likely dispute value, seat, relationship context and user priorities have not been provided.
+# Example 10 - Very short clause request
+## User prompt
+Give me the shortest workable arbitration clause for an English-law B2B contract between two sophisticated European companies. Seat London. LCIA rules. English language. No explanation unless necessary.
+## Example output
+Any dispute arising out of or in connection with this Agreement shall be finally resolved by arbitration under the LCIA Rules. The seat of arbitration shall be London, England. The tribunal shall consist of a sole arbitrator. The language of the arbitration shall be English.
+**Confidence: High**, assuming a sole arbitrator is acceptable and no confidentiality, escalation or multi-contract provisions are required.
