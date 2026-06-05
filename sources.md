@@ -228,19 +228,15 @@ PDF:
 https://iccwbo.org/wp-content/uploads/sites/3/2025/06/2024-Statistics_ICC_Dispute-Resolution.pdf
 Statistics page:
 https://iccwbo.org/news-publications/news/icc-dispute-resolution-statistics-2024/
-Recorded figures:
-For cases that concluded by final award in 2024, including where proceedings were suspended by party agreement, the average duration was 26 months and the median duration was 22 months.
 Use note:
-Current and reliable. Suitable for ICC duration comparisons, subject to methodology.
+Use the most recently published relevant statistics from the ICC statistics page. At the time of last update, the most recently published figures (ICC 2024 Statistics) reported an average duration of 26 months and a median duration of 22 months for cases concluding by final award in 2024, including where proceedings were suspended by party agreement. Check the statistics page for more recent figures before using these in any output.
 ## LCIA
 Primary source:
-LCIA Releases Updated Costs and Duration Analysis 2024.
+LCIA Costs and Duration Analysis (most recently published version).
 URL:
 https://www.lcia.org/News/lcia-releases-updated-costs-and-duration-analysis-2024.aspx
-Recorded figures:
-The LCIA reports that the median LCIA arbitration lasts 20 months. Cases with claims under USD 1 million are decided in 12 months.
 Use note:
-Current and reliable. Suitable for LCIA duration comparisons, subject to methodology. Note that LCIA uses an hourly-rate fee structure, so cost comparisons require care.
+Use the most recently published LCIA costs and duration analysis. At the time of last update, the most recently published figures (LCIA 2024 analysis) reported a median duration of 20 months overall, with cases involving claims under USD 1 million decided in a median of 12 months. Check the LCIA website for more recent figures before using these in any output. Note that LCIA uses an hourly-rate fee structure, so cost comparisons with ad valorem institutions require care.
 ## HKIAC
 Primary source:
 HKIAC Costs & Duration page.
@@ -278,7 +274,7 @@ When providing a duration comparison, the skill should:
 6. avoid predicting the duration of the user's specific dispute;
 7. offer to provide a fuller comparison if the user wants detail.
 Example output:
-"Published duration statistics are not perfectly comparable, but they are directionally useful. ICC's 2024 statistics report an average duration of 26 months and median duration of 22 months for cases concluding by final award in 2024. LCIA's 2024 analysis reports a median duration of 20 months. SIAC's 2016 study reported a median duration of 11.7 months, but that data is older and should be treated as historical."
+"Published duration statistics are not perfectly comparable, but they are directionally useful. Based on the most recently published ICC statistics (2024), the average duration was 26 months and the median was 22 months for cases concluding by final award; check the ICC statistics page for more recent figures. Based on the most recently published LCIA analysis (2024), the median duration was 20 months; check the LCIA website for more recent figures. SIAC's 2016 study reported a median duration of 11.7 months, but that data is older and should be treated as historical."
 # 6. Source hierarchy for drafting
 When drafting an arbitration clause, use this hierarchy:
 1. User's express instruction.

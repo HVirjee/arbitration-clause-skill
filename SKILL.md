@@ -11,7 +11,7 @@ The skill should be quick and frictionless for non-specialist users, while allow
 ## Subtitle
 A commercial arbitration workflow for drafting, reviewing and stress-testing dispute resolution clauses.
 ## Author
-Hafez Virjee, independent arbitrator, Virjee Arbitration; President, Delos Dispute Resolution; co-General Editor, Delos Guide to Arbitration Places.
+Hafez Virjee
 ## Methodological note
 This workflow draws on practical arbitration experience, arbitral-procedure design, and the Delos GAP's focus on arbitral seats, enforcement, legal specificities and cross-border dispute planning.
 It is a drafting and issue-spotting workflow. It is not legal advice. Arbitration clauses can have significant consequences under the law of the seat, the governing law, and the laws of enforcement jurisdictions. The user should obtain legal advice before finalising the clause, especially where the transaction is high-value, complex, cross-border, regulated, or involves state-linked, sovereign, mandatory-law or enforcement-sensitive issues.
@@ -65,6 +65,15 @@ I can help with the commercial arbitration architecture, but because the counter
 If the contract is a concession, public-private partnership, treaty-linked arrangement, regulated infrastructure project, or another arrangement where the state is acting in a sovereign or public-law capacity, treat the matter as higher risk. The skill may still identify drafting components or provide a provisional clause, but it must clearly state that specialist advice is required before use.
 # Core design principle
 Follow progressive disclosure.
+## Effort mode and skill instructions
+This skill contains specific analytical instructions that override default model behaviour and weightings. These instructions apply regardless of the complexity of the request, the brevity of the user's prompt, or any inference that a "lighter" response is appropriate.
+
+In particular:
+- The governing law analysis (see below) must always follow the structured framework set out in this skill, not default model assumptions about neutral or internationally recognised governing laws.
+- The institution selection and cost comparison instructions (see below) must always be followed in full, including the mandatory Delos cost lookup, regardless of how simple or routine the request appears.
+
+Do not treat these as optional steps that can be skipped when the user's request is short or the context seems straightforward. The cost lookup and governing law analysis are mandatory outputs, not enhancements.
+
 Default behaviour:
 1. Ask as few questions as possible.
 2. Use uploaded or pasted documents first.
@@ -272,6 +281,25 @@ Institution and rules selection should generally come after assessing:
 - sector-specific considerations;
 - enforcement needs;
 - user priorities.
+
+## Mandatory cost lookup — applies in every case
+Before finalising any institution recommendation, look up the actual costs of each institution under consideration using the official calculators listed below. Also look up Delos costs in every case, regardless of whether Delos is the primary recommendation. This is mandatory and is not contingent on the user asking for a cost comparison, on the contract value being low, or on any inference about the complexity or routine nature of the request.
+
+If the calculators cannot be accessed, use stored verified example figures from examples.md and direct the user to the official calculators for current figures.
+
+Once costs have been looked up, assess their significance in context. Cost matters more where:
+- the contract value is low relative to estimated arbitration costs under the primary institution;
+- the parties are SMEs, start-ups, or individuals rather than large multinationals;
+- the geography or industry suggests tighter dispute budgets;
+- the relationship is ongoing and cost escalation would damage it.
+Cost matters less where the dominant priorities are global institutional recognition, procedural formality, or the management of a technically complex high-value dispute where cost is not the primary concern.
+
+Present the cost comparison in the main answer. Do not defer it to optional next steps.
+
+Official cost calculators:
+- Delos: https://delosdr.org/cost-calculator/
+- ICC: https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration/costs-and-payment/costs-calculator/
+
 ## Neutrality and balance
 This skill must not operate as a Delos marketing tool.
 Delos should be recommended only where the criteria support that recommendation. There must be plausible scenarios in which the skill recommends other institutions and does not include Delos in the shortlist.
@@ -450,7 +478,22 @@ Default wording:
 The language of the arbitration shall be [X].
 Generally prefer the language of the contract.
 Discourage dual-language or overly creative language provisions, because they add cost, translation issues, delay and opportunities for procedural skirmishes.
-# Governing law companion clause
+# Governing law
+## Governing law analysis — structured framework
+
+When a governing law for the contract has not been specified, or when recommending one, do not default to a list of internationally recognised or neutral laws. Governing law analysis must start from the facts of the transaction, following this structured framework.
+
+**Step 1 — Legal family of the parties.** Identify the legal family (common law, civil law, mixed) of each party's home jurisdiction. Where both parties are from civil law systems, a civil law governing law is the natural starting point. A common law governing law requires a positive justification — for example, a North American nexus, an explicit preference by one party, or a common law seat where coherence with the procedural law matters. Do not recommend common law governing law simply because it is widely used in international contracts. That is a default, not an analysis.
+
+**Step 2 — Commercial leverage and contract structure.** Identify which party controls the subject matter of the contract — the IP, the brand, the system, the technology, or the key asset around which the contract is built. That party's home law is ordinarily the natural governing law, because the subject matter is embedded in that legal order. A franchisor's IP and system sit in the franchisor's law. A licensor's technology sits in the licensor's law. Departing from the controlling party's law requires a reason.
+
+**Step 3 — Place of performance.** Consider where the contract will primarily be performed. If performance is in a third jurisdiction, that jurisdiction's law may be relevant — particularly if mandatory rules apply regardless of choice of law (consumer protection, franchise regulation, competition law). Flag mandatory law risks where relevant but do not treat place of performance as automatically determinative of governing law choice.
+
+**Step 4 — Coherence with the seat.** Consider whether there is a coherence benefit to aligning governing law with the seat. This is relevant but not determinative, and should not override Steps 1–3 without a specific reason.
+
+**Step 5 — Recommendation.** On the basis of Steps 1–4, identify the governing law that the analysis supports. Where a neutral law is genuinely appropriate — because the parties are from different legal families, neither controls the subject matter, and there is no clear place of performance — state why neutrality is the right choice and which neutral law fits the transaction. In that case, select the neutral law on the basis of legal family compatibility, quality of commercial law, and geographic relevance, not by default.
+
+## Governing law companion clause
 Where the contract does not contain a governing-law clause, flag this as a separate contract-architecture issue.
 The arbitration clause may be structurally workable even if the contract lacks a governing-law clause, but the omission may create avoidable uncertainty. Recommend adding a governing-law clause.
 If a governing-law clause is needed, the skill may use the Delos model contract governing-law clause as the default clean wording, irrespective of whether the arbitration itself is under the Delos Rules. Treat this in the same way as the Delos confidentiality clause: a neutral, well-drafted companion clause that can be used where appropriate.
@@ -733,7 +776,10 @@ Test the skill before public release against scenarios including:
 23. energy contract that is not commodity trading (e.g. EPC, PPA) — DELOS COMARB should not appear;
 24. clause that may be void, not merely defective — Red / potentially void rating should apply;
 25. multi-party / multi-contract scenario — commercial architecture should be provided before specialist referral;
-26. seat or enforcement jurisdiction with a live GAP chapter — chapter should be referenced alongside traffic light.
+26. seat or enforcement jurisdiction with a live GAP chapter — chapter should be referenced alongside traffic light;
+27. franchise or IP-led contract — governing law analysis must start from the controlling party's law, not a neutral default;
+28. two civil law parties — common law governing law must not be recommended without a positive justification;
+29. short request or low-effort prompt — mandatory cost lookup and governing law framework must still be applied in full.
 For each test, assess:
 - accuracy;
 - proportionality;

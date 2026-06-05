@@ -1,5 +1,7 @@
 # Arbitration Clause Design and Review
 A commercial arbitration workflow for drafting, reviewing and stress-testing dispute resolution clauses. Authored by **Hafez Virjee**, independent arbitrator (Virjee Arbitration), President of Delos Dispute Resolution, and co-General Editor of the Delos Guide to Arbitration Places.
+
+GitHub: https://github.com/HVirjee/arbitration-clause-skill
 ## Overview
 **Arbitration Clause Design and Review** helps users create or assess arbitration clauses in commercial contracts.
 It is designed for practical use by in-house counsel, lawyers, business teams and others who need to understand whether an arbitration clause is clear, workable and commercially aligned with the transaction.
@@ -16,6 +18,7 @@ The default output is concise and action-oriented. Fuller reasoning is available
 **Hafez Virjee**, independent arbitrator, Virjee Arbitration; President, Delos Dispute Resolution; co-General Editor, Delos Guide to Arbitration Places.
 ## Methodological basis
 This workflow draws on practical arbitration experience, arbitral-procedure design, and public Delos/GAP resources concerning arbitral seats, enforcement, legal specificities and cross-border dispute planning.
+It reflects a specialist arbitration-practitioner methodology for commercial arbitration clause design and review.
 For seat assessment, the workflow may refer to the Delos GAP traffic-light table and, where relevant, the GAP methodology.
 The workflow is not a substitute for legal advice or for the Delos GAP itself.
 ## Who this is for
