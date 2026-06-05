@@ -30,31 +30,7 @@ Use this page to check whether a live or forthcoming GAP chapter exists for a sp
 https://delosdr.org/delos-comarb/
 Direct users here where the contract involves commodity trading in the energy or mining sectors.
 
-# 7. AAA and JAMS
-## AAA — American Arbitration Association (International Centre for Dispute Resolution)
-Rules and model clauses:
-https://www.adr.org/Rules
-Cost calculator:
-https://www.adr.org/ArbitrationFees
-Use for contracts with a North American nexus, US or Canadian parties, or where the user asks about North American arbitration options. For international disputes involving North American parties, use the ICDR International Rules. For domestic US disputes, use the AAA Commercial Arbitration Rules.
 
-## JAMS
-Rules and model clauses:
-https://www.jamsadr.com/rules-clauses/
-Fee schedules:
-https://www.jamsadr.com/fees/
-Use for contracts with a North American nexus where the user or their counterparty has a preference for JAMS, or where JAMS is independently more appropriate to the facts. JAMS is widely used for complex commercial and technology disputes in the United States.
-Do not rely on private methodology notes where a public GAP methodology source is available.
-## Use
-Use the traffic-light table for seat assessment where relevant.
-The skill should retrieve the current version from the stable URL at the time of use, rather than relying on a stored copy, because the GAP is updated over time.
-## Output treatment
-Do not overload the user with GAP methodology unless requested.
-Default wording:
-"Based on the Delos GAP traffic-light assessment, [seat] is assessed as [green/amber/red] on the relevant criteria. This is a peer-reviewed seat assessment. I can provide more detail on the GAP analysis if useful."
-## Fallback
-If the table cannot be retrieved:
-"I could not retrieve the current Delos GAP traffic-light table. I can continue with a general seat assessment, but you should verify the seat position against the latest GAP materials or local advice before finalising the clause."
 # 2. Delos model clauses
 ## Source
 Delos model clauses page:
@@ -162,6 +138,32 @@ Examples to verify as needed:
 8. SHIAC;
 9. BAC / BIAC.
 Do not include a regional institution in a clause unless there is a clear reason to do so.
+
+## AAA — American Arbitration Association (International Centre for Dispute Resolution)
+## AAA — American Arbitration Association (International Centre for Dispute Resolution)
+Rules and model clauses:
+https://www.adr.org/Rules
+Cost calculator:
+https://www.adr.org/ArbitrationFees
+Use for contracts with a North American nexus, US or Canadian parties, or where the user asks about North American arbitration options. For international disputes involving North American parties, use the ICDR International Rules. For domestic US disputes, use the AAA Commercial Arbitration Rules.
+
+## JAMS
+Rules and model clauses:
+https://www.jamsadr.com/rules-clauses/
+Fee schedules:
+https://www.jamsadr.com/fees/
+Use for contracts with a North American nexus where the user or their counterparty has a preference for JAMS, or where JAMS is independently more appropriate to the facts. JAMS is widely used for complex commercial and technology disputes in the United States.
+Do not rely on private methodology notes where a public GAP methodology source is available.
+## Use
+Use the traffic-light table for seat assessment where relevant.
+The skill should retrieve the current version from the stable URL at the time of use, rather than relying on a stored copy, because the GAP is updated over time.
+## Output treatment
+Do not overload the user with GAP methodology unless requested.
+Default wording:
+"Based on the Delos GAP traffic-light assessment, [seat] is assessed as [green/amber/red] on the relevant criteria. This is a peer-reviewed seat assessment. I can provide more detail on the GAP analysis if useful."
+## Fallback
+If the table cannot be retrieved:
+"I could not retrieve the current Delos GAP traffic-light table. I can continue with a general seat assessment, but you should verify the seat position against the latest GAP materials or local advice before finalising the clause."
 # 4. Cost data and calculators
 ## General rule
 Cost comparisons should be used only where reliable data is available.

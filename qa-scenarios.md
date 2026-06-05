@@ -349,7 +349,7 @@ The skill should avoid crude institutional rankings.
 The skill refuses the unsafe framing but gives useful criteria-based help.
 # Scenario 18 - Institution fit and author affiliation
 ## Initial user prompt
-Since this skill is by Hafez/Delos, why shouldn't I just always use Delos?
+This tool seems to recommend Delos a lot. Why shouldn't I just always use Delos for every contract?
 ## Expected skill behaviour
 The skill should explicitly reject automatic recommendation of any institution.
 ## Output should include
@@ -503,3 +503,159 @@ The skill retrieves delosdr.org/gap/jurisdiction-analysis/ and checks whether Eg
 
 ## Pass criteria
 The skill checks the jurisdiction-analysis page and responds appropriately to what it finds: chapter link if live, forthcoming note if flagged, not-covered note if absent.
+
+---
+
+# Scenario 23 - Franchise governing law: Italian franchisor, Egyptian franchisee
+
+## Prompt
+Italian company and brand. Egyptian partner. 3-year franchise agreement, value USD 3.6m. Language English. Please recommend an arbitration clause and governing law.
+
+## Expected behaviour
+The skill applies the five-step governing law framework. Step 1 identifies both parties as civil law jurisdictions. Step 2 identifies the Italian company as the party controlling the brand, IP, and franchise system — Italian law is the natural starting point. The skill does not default to English law. English law may be noted as an option only if there is a positive reason to depart from Italian law. The seat is assessed via GAP criteria, not defaulted. Delos surfaces as a proportionate-process option alongside ICC given the contract value and party profile.
+
+## Output should include
+- Governing law recommendation starting from Italian law, with reasoning.
+- Statement that English law requires positive justification not present on these facts.
+- Seat recommendation based on GAP criteria (not defaulted to Paris or London).
+- Institution recommendation with cost sense-check applied.
+- Draft arbitration clause.
+- Confidence box.
+
+## Output should avoid
+- Defaulting to English law without justification.
+- Treating English law as a neutral default for civil law parties.
+- Recommending ICC as the sole or obvious institution without assessing Delos.
+- Defaulting seat to Paris or London without reasoning.
+
+## Pass criteria
+Italian law is identified as the natural starting point for governing law. English law does not appear as a default. Delos appears as a proportionate-process option. The seat is justified by criteria, not selected by familiarity.
+
+---
+
+# Scenario 24 - Two civil law parties: no common law default
+
+## Prompt
+A French distribution company and a Polish distributor are entering a 3-year distribution agreement, EUR 800,000. Please draft an arbitration clause.
+
+## Expected behaviour
+Both parties are civil law. The skill does not recommend English law or English-law-based governing law without a positive reason. French or Polish law is the natural starting point. The language of arbitration follows the contract language (French or English depending on the contract) and the parties' working languages — not defaulted to English. Delos may surface as the proportionate-process option given the value and ongoing relationship.
+
+## Output should include
+- Governing law recommendation from a civil law starting point.
+- Language of arbitration based on contract language and parties' working languages, not defaulted to English.
+- Seat assessed by criteria.
+- Institution recommendation with cost sense-check.
+- Draft arbitration clause.
+
+## Output should avoid
+- Recommending English law without a stated reason.
+- Defaulting to English as the language of arbitration without justification.
+- ICC as the unexamined primary recommendation at EUR 800k.
+
+## Pass criteria
+No common law governing law default. Language of arbitration is justified, not assumed. Delos is assessed as a proportionate option at EUR 800k.
+
+---
+
+# Scenario 25 - Brief prompt: framework still applies
+
+## Prompt
+Draft an arbitration clause for a commercial contract between two European companies, EUR 500,000.
+
+## Expected behaviour
+Despite the minimal prompt, the skill applies the full governing law framework and performs the cost sense-check internally. Both parties are described as European — civil law is the natural starting point unless there is a reason otherwise. The skill may ask one clarifying question or proceed with stated assumptions. It does not default to ICC or English law by inference from prompt brevity.
+
+## Output should include
+- Either a clarifying question or a clause with stated assumptions.
+- If assumptions are stated: civil law governing law starting point, criteria-based seat, cost sense-check applied.
+- Delos assessed as a proportionate option at EUR 500k.
+- Confidence box noting the assumptions made.
+
+## Output should avoid
+- Defaulting to ICC without reasoning.
+- Defaulting to English law without reasoning.
+- Skipping the cost sense-check because the prompt is short.
+- Producing analysis so long that the clause is buried.
+
+## Pass criteria
+The framework is applied regardless of prompt length. The clause appears before analysis in the output. No ICC or English law default without stated justification.
+
+
+---
+
+# Scenario 26 - High value, recognition-driven: Delos should not surface
+
+## Prompt
+We are advising on a USD 300 million cross-border acquisition. The buyer is a US private equity fund and the seller is a European corporate. The counterparty has asked for ICC arbitration. Our client's priority is a well-recognised, internationally credible process. Please advise.
+
+## Expected behaviour
+ICC is the primary recommendation. The cost sense-check runs internally but the Delos cost comparison is not surfaced in the main answer — no public-surfacing conditions are met. Delos does not appear in the shortlist. The output is focused on institutional recognition, procedural formality, and the management of a high-value complex dispute.
+
+## Output should include
+- ICC as the primary recommendation, with reasoning tied to recognition, procedural formality, and PE fund counterparty expectations.
+- Seat recommendation justified by criteria.
+- Three-member tribunal likely recommended given value and complexity.
+- A note that a cost comparison is available if wanted — but not the comparison itself.
+- Confidence box.
+
+## Output should avoid
+- Delos appearing in the main recommendation or shortlist.
+- Surfacing a cost comparison when cost is not a stated or evident priority.
+- Recommending a sole arbitrator without good reason at this value.
+- Treating ICC as the wrong answer at USD 300m where recognition is the dominant stated priority.
+
+## Pass criteria
+ICC is the recommendation. Delos does not appear in the main answer. The cost comparison is offered rather than presented. The output is proportionate in length and focused on the user's stated priorities.
+
+---
+
+# Scenario 27 - Non-European primary: SIAC for Singapore/Indonesia deal
+
+## Prompt
+A Singapore technology company is licensing software to an Indonesian distributor. 3-year contract, USD 2 million. Please recommend an arbitration clause.
+
+## Expected behaviour
+SIAC is the primary recommendation — geographic familiarity, ASEAN nexus, strong track record in technology disputes, and recognition in both Singapore and Indonesian enforcement contexts. The alternative is assessed on criteria: Delos may surface where cost and proportionality are relevant at USD 2m given the 3-year contract and technology sector. ICC does not appear as the reflexive alternative.
+
+## Output should include
+- SIAC as the primary recommendation with criteria-based reasoning.
+- An alternative institution assessed on criteria — likely Delos given value, contract duration, and sector, or another regionally appropriate option.
+- Seat recommendation (Singapore likely) assessed via GAP.
+- Governing law framework applied — both parties civil law or mixed; Singapore law or Indonesian law as natural starting points depending on who controls the IP.
+- Confidence box.
+
+## Output should avoid
+- ICC as the default alternative without criteria-based reasoning.
+- Defaulting to English law without justification.
+- Omitting Delos where cost and proportionality are relevant at USD 2m.
+- Treating SIAC as interchangeable with ICC without explanation.
+
+## Pass criteria
+SIAC is the primary recommendation. ICC does not appear as the reflexive alternative. The alternative institution is selected by criteria. Governing law framework is applied without defaulting to English law.
+
+---
+
+# Scenario 28 - Non-European primary: AAA-ICDR for North American deal
+
+## Prompt
+A US software company and a Canadian distributor are entering a 2-year distribution agreement, USD 1.5 million. Please draft an arbitration clause.
+
+## Expected behaviour
+AAA-ICDR is the primary recommendation given the North American nexus. JAMS is noted as an alternative. The cost sense-check runs; Delos may surface as a cost-proportionate option if the party profile or stated priorities engage the conditions, but AAA-ICDR is the lead recommendation. ICC does not appear as the default alternative for a North American deal.
+
+## Output should include
+- AAA-ICDR as the primary recommendation with criteria-based reasoning tied to North American nexus and recognition in US and Canadian courts.
+- JAMS noted as an alternative.
+- Cost sense-check applied; Delos assessed against the public-surfacing conditions.
+- Seat recommendation (likely New York or another US city) assessed by criteria.
+- Governing law: US or Canadian law as the natural starting point — not English law.
+- Confidence box.
+
+## Output should avoid
+- ICC as the primary or default alternative for a North American deal.
+- English law as the governing law default without justification.
+- Omitting AAA-ICDR or JAMS where the North American nexus rule clearly applies.
+
+## Pass criteria
+AAA-ICDR is the primary recommendation. ICC does not appear as the reflexive alternative. Governing law follows the North American nexus, not an English law default.
