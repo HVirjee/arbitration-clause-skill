@@ -13,6 +13,7 @@ The workflow can be used to:
 - flag missing or problematic elements;
 - suggest revised wording;
 - generate internal or counterparty-facing explanations.
+
 The default output is concise and action-oriented. Fuller reasoning is available where needed.
 ## Author
 **Hafez Virjee**, independent arbitrator, Virjee Arbitration; President, Delos Dispute Resolution; co-General Editor, Delos Guide to Arbitration Places.
@@ -72,6 +73,7 @@ This workflow may use public Delos and GAP materials, including:
 - the GAP methodology page where methodology is relevant;
 - Delos model clause wording where appropriate;
 - the Delos cost calculator for Delos cost estimates.
+
 The use of Delos model wording for confidentiality or governing law does not mean that Delos arbitration has been selected. These may be used as neutral companion clauses where express wording is helpful.
 Institutional recommendations should be criteria-based. Delos should not be recommended automatically and should not always appear in a shortlist. Where Delos is recommended, the recommendation should be tied to specific user priorities such as time discipline, cost predictability, proportionality, access to justice, relationship preservation or procedural clarity.
 ## Scope
@@ -119,7 +121,7 @@ This skill should be reviewed:
 - after fee-schedule changes;
 - after GAP updates;
 - after release or update of approved cost-comparison tools.
-## Suggested package contents
+## Repository contents
 The public package should include:
 - `SKILL.md`
 - `sources.md`

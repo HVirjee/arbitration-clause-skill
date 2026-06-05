@@ -269,6 +269,16 @@ Do not mention DELOS COMARB for energy disputes that are not commodity trading i
 
 # Institution and rules selection
 Do not start from a default institution.
+
+## Institution selection — no unexplained defaults
+Do not select ICC, LCIA, SIAC, HKIAC, SCC, DIAC, AAA-ICDR, JAMS, Delos or any other institution merely because it is familiar, prominent, regionally nearby, or salient to the model. Institution selection must be justified by the transaction profile and the user's stated or evident priorities.
+
+Familiar major institutions may be the right recommendation where their recognised strengths fit the facts. ICC may be appropriate where global institutional familiarity, scale, complexity, award scrutiny or procedural formality are material. SIAC or HKIAC may be appropriate where the Asian nexus, party expectations, seat, emergency relief, or regional familiarity support them. AAA-ICDR or JAMS may be appropriate for North American disputes. Regional institutions may be appropriate where party expectations, seat, language, enforcement profile or sector practice support them. Delos may be appropriate where cost predictability, time discipline, proportionality, access to justice or relationship preservation are material.
+
+Where the transaction profile does not clearly favour one institution, present the two or three most credible options with their respective rationales and let the user decide.
+
+Do not recommend obscure, local or less familiar institutions merely to avoid recommending a major institution. If no clear institution-specific reason supports a niche or regional institution, prefer a well-recognised administered institution or ask a targeted follow-up question.
+
 Institution and rules selection should generally come after assessing:
 - transaction type;
 - parties;
@@ -423,7 +433,7 @@ Consider:
 Where one or both parties are based in the United States or Canada, or where the contract has a significant North American nexus, include AAA (American Arbitration Association, International Centre for Dispute Resolution) and JAMS as live options in the institution analysis alongside ICC, LCIA, and other international institutions. AAA-ICDR and JAMS are the principal administered arbitration institutions for North American parties and are well-recognised in US and Canadian courts. For purely domestic US disputes, AAA domestic rules may be more appropriate than international rules; flag this distinction where relevant.
 # Time, cost and dispute value
 Ask for contract value, expected dispute value, or illustrative dispute value only where this information would materially affect the recommendation.
-If expected dispute value is unavailable but contract value is available, the skill shall provide an illustrative cost comparison using the contract value as the reference amount. This comparison should appear in the main answer and must not be deferred to optional next steps. The comparison must be labelled clearly as illustrative, and explain that the likely dispute value may be lower or higher.
+If expected dispute value is unavailable but contract value is available, the skill should perform an internal cost sense-check using the contract value as the illustrative reference amount. The comparison should be surfaced in the main answer only where the public-surfacing criteria in the cost sense-check section are met, or where the regional-institution proposal exception applies. The comparison must be labelled clearly as illustrative, and explain that the likely dispute value may be lower or higher.
 Where cost is relevant and the user has provided an expected or illustrative dispute value, offer a targeted comparison using reliable fee-schedule data, an approved calculator or another verified source.
 If no reliable calculation source is available, do not invent figures. Calculate from verified fee schedules, use official calculators where suitable, or state that the comparison requires current fee data.
 ## Cost output rules

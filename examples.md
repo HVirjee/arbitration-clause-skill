@@ -183,3 +183,66 @@ Give me the shortest workable arbitration clause for an English-law B2B contract
 ## Example output
 Any dispute arising out of or in connection with this Agreement shall be finally resolved by arbitration under the LCIA Rules. The seat of arbitration shall be London, England. The tribunal shall consist of a sole arbitrator. The language of the arbitration shall be English.
 **Confidence: High**, assuming a sole arbitrator is acceptable and no confidentiality, escalation or multi-contract provisions are required.
+
+---
+
+# Example 11 - Italy/Egypt franchise agreement: governing law, institution and clause
+
+## User prompt
+Franchise agreement. Italian company and brand. Egypt partner. 3-year contract, value USD 3.6m. Language English. Recommend an arbitration clause and governing law.
+
+## Example output
+
+### Governing law
+
+Italian law is the natural starting point.
+
+Step 1 — Legal family: both Italy and Egypt are civil law jurisdictions. A common law governing law requires positive justification not present on these facts.
+
+Step 2 — Commercial leverage: the Italian company controls the brand, IP, and franchise system. The subject matter is embedded in Italian law. Departing from Italian law requires a reason.
+
+Step 3 — Place of performance: the franchise will operate in Egypt. Egyptian mandatory law, including any applicable franchise regulation, competition law, or local registration requirements, may apply regardless of the governing law chosen. These points should be reviewed with Egyptian counsel before the agreement is finalised.
+
+Step 4 — Coherence with seat: considered below.
+
+**Recommendation:** Italian law, subject to a review of Egyptian mandatory law applicable to the franchise operation.
+
+---
+
+### Dispute resolution
+
+**Recommended clause**
+
+Any dispute, controversy or claim arising out of or in connection with this Agreement, or the breach, termination or validity thereof, shall be finally resolved by arbitration administered by [Delos / ICC] under the [Delos Rules / ICC Rules of Arbitration].
+
+The seat of arbitration shall be [Paris / Vienna / Geneva — see note].
+
+The arbitral tribunal shall consist of one arbitrator.
+
+The language of the arbitration shall be English.
+
+**Tiered step (recommended)**
+
+Before commencing arbitration, the parties shall attempt to resolve the dispute through senior executive negotiations for a period of 30 days from written notice of the dispute. If unresolved within that period, either party may commence arbitration.
+
+---
+
+### Why this approach
+
+**Institution:** For a USD 3.6m, 3-year franchise agreement with an ongoing commercial relationship, a proportionate administered process is a strong fit. Delos may be recommended where cost predictability, time discipline and relationship preservation are priorities. ICC is the appropriate conventional alternative where the parties prioritise global institutional familiarity, award scrutiny or a more formal process. The choice between them should follow the parties' stated or evident priorities, not a default assumption.
+
+**Seat:** Paris, Vienna and Geneva are all credible neutral seats for an Italy/Egypt transaction. Each should be assessed against the GAP traffic-light criteria and the parties' enforcement needs before a final selection is made. No seat should be selected purely by familiarity.
+
+**Sole arbitrator:** Proportionate at USD 3.6m for a straightforward franchise dispute. A three-member tribunal may be appropriate if the parties have low trust or if the dispute is likely to involve complex technical issues.
+
+**Tiered step:** A franchise is a continuing commercial relationship. A short negotiation window before arbitration is consistent with relationship preservation and is proportionate to the contract profile.
+
+**Language:** English is appropriate here because the prompt specifies English as the contract language.
+
+---
+
+### Confidence
+**Medium-High.** Contract type, value, parties, language and duration are provided. Governing law and seat have not been confirmed by the parties. The choice between Delos and ICC depends on priorities not stated in the prompt. Egyptian mandatory law review is flagged but not assessed here.
+
+### Missing information
+Confirmation of preferred seat; whether the parties have a preference on institutional formality or cost predictability; Egyptian franchise and mandatory law review.
