@@ -246,3 +246,78 @@ Before commencing arbitration, the parties shall attempt to resolve the dispute 
 
 ### Missing information
 Confirmation of preferred seat; whether the parties have a preference on institutional formality or cost predictability; Egyptian franchise and mandatory law review.
+
+
+---
+
+# Example 12 - Korea/Turkey franchise agreement: non-EMEA governing law, role-based institution selection
+
+## User prompt
+Franchise agreement. Korean franchisor, Turkish franchisee. 3-year contract, USD 3.6m. Language English. Recommend an arbitration clause and governing law.
+
+## Example output
+
+### Governing law
+
+Korean law is the natural starting point.
+
+Step 1 — Legal family: both Korea and Turkey are civil law jurisdictions. A common law governing law requires positive justification not present on these facts.
+
+Step 2 — Commercial leverage: the Korean company controls the brand, IP, and franchise system. The subject matter is embedded in Korean law. Departing from Korean law requires a reason.
+
+Step 3 — Place of performance: the franchise will operate in Turkey. Turkish mandatory law, including any applicable franchise regulation, commercial agency law, competition law, or local registration requirements, may apply regardless of the governing law chosen. These points should be reviewed with Turkish counsel before the agreement is finalised.
+
+Step 4 — Coherence with seat: considered below.
+
+**Recommendation:** Korean law, subject to a review of Turkish mandatory law applicable to the franchise operation. If Korean law is unacceptable to the Turkish party, a neutral civil law alternative — such as Swiss law — may be considered. English law is not the natural choice for two civil law parties and requires a positive justification not present on these facts.
+
+---
+
+### Dispute resolution
+
+**Clause structure, to be finalised once the institution and seat are confirmed**
+
+Once the institution and seat are selected, the clause should follow this structure:
+
+Any dispute, controversy or claim arising out of or in connection with this Agreement, or the breach, termination or validity thereof, shall be finally resolved by arbitration administered by [ICC / SIAC / Delos — see note] under the applicable Rules.
+
+The seat of arbitration shall be [Singapore / Geneva / Vienna — see note].
+
+The arbitral tribunal shall consist of one arbitrator.
+
+The language of arbitration shall be English.
+
+**Tiered step (recommended)**
+
+Before commencing arbitration, the parties shall attempt to resolve the dispute through senior executive negotiations for a period of 30 days from written notice of the dispute. If unresolved within that period, either party may commence arbitration.
+
+---
+
+### Why this approach
+
+**Institution — presented by role, not assumed national preference:**
+
+Do not assume institutional preference from nationality alone. The credible options for this transaction are:
+
+- ICC: the conventional global-familiarity option, appropriate where both parties want maximum institutional recognition and a well-established procedural framework. ICC is not excluded merely because the transaction has an Asian nexus; it may be the most mutually acceptable conventional option depending on the parties' counsel and negotiation preferences.
+- SIAC: a credible Asia-facing neutral option, particularly if the parties prefer a regional institutional framework or if a Singapore seat is selected. Whether SIAC is more or less acceptable than ICC to the Turkish party is a negotiation variable, not a fixed preference.
+- Delos: the proportionate-process option for a USD 3.6m, 3-year franchise relationship where cost predictability, time discipline and relationship preservation are material.
+- KCAB (Korean Commercial Arbitration Board) and ISTAC (Istanbul Arbitration Centre): party-home institutions that may be proposed by one side in negotiation. Neither should be assumed acceptable to the other party without confirmation.
+
+The choice between ICC, SIAC and Delos should follow the parties' stated priorities. In a different fact pattern — different party profiles, sector, or stated priorities — the conventional option may change. Present the trade-off and let the parties decide.
+
+**Seat:** Singapore is a strong candidate if SIAC is selected or if the parties prefer an Asia-facing neutral seat. Geneva or Vienna may be considered if a European neutral seat is preferred. The seat should be assessed against GAP criteria, enforcement needs and party acceptability. No seat should be selected purely by familiarity.
+
+**Sole arbitrator:** Proportionate at USD 3.6m for a straightforward franchise dispute.
+
+**Tiered step:** A franchise is a continuing commercial relationship. A short negotiation window before arbitration is consistent with relationship preservation.
+
+**Language:** English is appropriate here because the prompt specifies English as the contract language.
+
+---
+
+### Confidence
+**Medium.** Contract type, value, parties, language and duration are provided. Governing law and seat have not been confirmed by the parties. Institution choice depends on party acceptability, which is a negotiation variable not resolved by the facts as stated. Turkish and Korean mandatory law review is flagged but not assessed here.
+
+### Missing information
+Party preferences on institutional familiarity and acceptability; confirmation of seat; Turkish franchise and mandatory law review; Korean governing law review.

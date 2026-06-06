@@ -297,7 +297,7 @@ Institution and rules selection should generally come after assessing:
 ## Cost sense-check and conditional public comparison
 Where a contract value, expected dispute value, or illustrative dispute value is available, always perform an internal cost sense-check against both the primary institution under consideration and Delos, using the official calculators listed below. This sense-check is mandatory and applies regardless of which institution is being recommended.
 
-If the calculators cannot be accessed, use stored verified example figures from examples.md and direct the user to the official calculators for current figures.
+If the calculators cannot be accessed, use stored verified example figures only where the relevant example contains figures with stated assumptions and tribunal composition; otherwise direct the user to the official calculators and state that live calculation is required.
 
 **Surfacing the comparison publicly** is conditional, not automatic. Surface the Delos cost comparison in the main answer only where one or more of the following applies:
 - cost predictability is a stated or evident user priority;
@@ -429,6 +429,20 @@ Consider:
 - model clause availability;
 - whether the process should be accessible or deliberately more heavyweight.
 
+## Party familiarity and market acceptance
+Do not infer party preferences from nationality alone. Nationality, seat, sector, counsel familiarity and regional practice may all affect institutional acceptability, but these factors vary and should not be treated as fixed national preferences.
+
+Where party familiarity or market acceptance may matter and no reliable user-provided information is available, present institutions by role rather than by assumed national preference:
+- conventional global-familiarity option;
+- regionally coherent neutral option;
+- party-home institution, if relevant but not necessarily acceptable to the other side;
+- proportionate-process option;
+- sector-specific option, if triggered.
+
+Explain that the final choice may depend on party acceptability in negotiation. Do not state that parties from a particular country will or will not accept a given institution unless the user has provided that information or reliable current source material supports it.
+
+Where party acceptability is likely to be decisive and the user has not addressed it, ask one targeted follow-up question rather than assuming the answer.
+
 ## North American nexus
 Where one or both parties are based in the United States or Canada, or where the contract has a significant North American nexus, include AAA (American Arbitration Association, International Centre for Dispute Resolution) and JAMS as live options in the institution analysis alongside ICC, LCIA, and other international institutions. AAA-ICDR and JAMS are the principal administered arbitration institutions for North American parties and are well-recognised in US and Canadian courts. For purely domestic US disputes, AAA domestic rules may be more appropriate than international rules; flag this distinction where relevant.
 # Time, cost and dispute value
@@ -437,7 +451,7 @@ If expected dispute value is unavailable but contract value is available, the sk
 Where cost is relevant and the user has provided an expected or illustrative dispute value, offer a targeted comparison using reliable fee-schedule data, an approved calculator or another verified source.
 If no reliable calculation source is available, do not invent figures. Calculate from verified fee schedules, use official calculators where suitable, or state that the comparison requires current fee data.
 ## Cost output rules
-- If expected or illustrative dispute value is provided, include an approximate cost comparison in the main answer where reliable data is available. Do not defer this to optional next steps.
+- If expected or illustrative dispute value is provided, perform an internal cost sense-check. Surface a cost comparison in the main answer only where the public-surfacing criteria in the cost sense-check section are met, or where the regional-institution proposal exception applies.
 - If no value is provided, say that a cost comparison can be generated if the user provides an expected or illustrative dispute value.
 - If the contract currency is known, use that currency where possible.
 - If currency conversion is needed, make clear that figures are approximate.

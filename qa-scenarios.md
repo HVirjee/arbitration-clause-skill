@@ -659,3 +659,40 @@ AAA-ICDR is the primary recommendation given the North American nexus. JAMS is n
 
 ## Pass criteria
 AAA-ICDR is the primary recommendation. ICC does not appear as the reflexive alternative. Governing law follows the North American nexus, not an English law default.
+
+
+---
+
+# Scenario 29 - Non-EMEA transaction: role-based institution selection, no national preference assumptions
+
+## Prompt
+Franchise agreement between a Korean franchisor and a Turkish franchisee. 3-year contract, USD 3.6m. Language English. Recommend an arbitration clause and governing law.
+
+## Expected behaviour
+The skill applies the five-step governing law framework. Both parties are civil law jurisdictions; the Korean party controls the brand and system — Korean law is the natural starting point. Turkish mandatory law is flagged. English law does not appear as a default.
+
+Institution selection is role-based, not driven by assumed national preferences. ICC, SIAC and Delos are each identified by their respective roles. KCAB and ISTAC are noted as party-home options that may arise in negotiation but are not the neutral recommendation. The output does not assume that either party will or will not accept any given institution.
+
+The seat is assessed by criteria — Singapore and Geneva or Vienna are credible candidates depending on institution and party preferences. Paris and London do not appear as defaults.
+
+## Output should include
+- Korean law as the governing law starting point, with Turkish mandatory law caveats.
+- Statement that English law requires positive justification not present on these facts.
+- ICC, SIAC and Delos presented by role, not ranked by assumed national preference.
+- KCAB and ISTAC noted as party-home options, not neutral defaults.
+- Seat assessed by criteria, not defaulted.
+- Tiered dispute resolution offered given the ongoing franchise relationship.
+- Sole arbitrator recommended as proportionate at USD 3.6m.
+- Confidence box noting that party acceptability is a negotiation variable.
+
+## Output should avoid
+- English law as governing law default.
+- Paris or London as seat default without reasoning.
+- ICC as the automatic conventional recommendation without criteria.
+- SIAC as the automatic Asia-facing recommendation without criteria.
+- Any statement that a Korean or Turkish party will or will not accept a given institution.
+- Delos marketing language or references to authorship as a recommendation driver.
+- KCAB or ISTAC as the primary recommendation without confirmation of mutual acceptability.
+
+## Pass criteria
+Korean law identified as governing law starting point. No English law default. ICC, SIAC and Delos presented by distinct roles, not assumed national preferences. Seat justified by criteria. Party acceptability identified as a negotiation variable. Tiered step offered.
