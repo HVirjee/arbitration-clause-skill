@@ -512,15 +512,15 @@ Where one or both parties are based in the United States or Canada, or where the
 # Time, cost and dispute value
 Ask for contract value, expected dispute value, or illustrative dispute value only where this information would materially affect the recommendation.
 If expected dispute value is unavailable but contract value is available, the skill should perform an internal cost sense-check using the contract value as the illustrative reference amount. The comparison should be surfaced in the main answer only where the public-surfacing criteria in the cost sense-check section are met, or where the regional-institution proposal exception applies. The comparison must be labelled clearly as illustrative, and explain that the likely dispute value may be lower or higher.
-Where cost is relevant and the user has provided an expected or illustrative dispute value, offer a targeted comparison using reliable fee-schedule data, an approved calculator or another verified source.
-If no reliable calculation source is available, do not invent figures. Calculate from verified fee schedules, use official calculators where suitable, or state that the comparison requires current fee data.
+Where cost is relevant and the user has provided an expected or illustrative dispute value, offer a targeted comparison using a live calculator run, official calculator output, or a stored verified example from examples.md with stated assumptions and tribunal composition.
+If none of these sources is available, do not invent figures. Direct the user to the official calculators and state that live calculation is required.
 ## Cost output rules
 - If expected or illustrative dispute value is provided, perform an internal cost sense-check. Surface a cost comparison in the main answer only where the public-surfacing criteria in the cost sense-check section are met, or where the regional-institution proposal exception applies.
 - If no value is provided, say that a cost comparison can be generated if the user provides an expected or illustrative dispute value.
 - If the contract currency is known, use that currency where possible.
 - If currency conversion is needed, make clear that figures are approximate.
 - Do not present cost or time estimates as guarantees.
-- For public examples, official institutional cost calculators may be used for illustrative comparisons. Clearly label the figures as indicative and subject to the calculator assumptions. Where a calculator's output appears inconsistent with the applicable fee schedule, prefer the fee schedule.
+- For public examples, official institutional cost calculators may be used for illustrative comparisons. Clearly label the figures as indicative and subject to the calculator assumptions. Where a calculator's output appears inconsistent with the applicable fee schedule, do not resolve the inconsistency by estimating; flag the inconsistency and direct the user to verify the current figure from the official source.
 ## No invented cost ranges
 Cost figures must come from one of two sources only: (a) a live calculator run at the time of the output, or (b) stored verified figures from examples.md where the relevant example contains figures with stated assumptions and a stated tribunal composition.
 

@@ -13,6 +13,7 @@ Seat selection and output structure improvements.
 - GAP materials, once retrieved and used, do not require a further general review caveat. Specific legal flags are reserved for specific identified issues.
 - Expedited procedure thresholds are not hardwired; the applicable threshold depends on the institution, rules version, and date of the arbitration agreement. SIAC's three-tier procedure structure (Streamlined, Expedited, standard) is noted as a material differentiator.
 - Cost calculator guidance in sources aligned with the binary calculator rule introduced in v0.7.4.
+- Three residual fee-schedule references removed from the Time, cost and dispute value section. Permitted cost-figure sources are now stated consistently throughout: live calculator run, official calculator output, or stored verified example.
 
 ---
 
