@@ -260,6 +260,12 @@ Three outcomes:
 - **Jurisdiction not listed:** note that the GAP does not currently cover this jurisdiction, use the traffic light table for any rating available, and recommend local legal advice.
 
 Do not attempt to construct chapter PDF URLs directly. The jurisdiction-analysis page is the authoritative source for chapter availability and status.
+
+## GAP links in outputs
+Where the skill relies on GAP materials in an output, include clickable links to the relevant public GAP resources.
+- If referring to the traffic-light table, include a link to: https://delosdr.org/wp-content/uploads/2021/06/Delos-GAP-2nd-edn-Combined-traffic-lights.pdf
+- If a live GAP jurisdiction chapter is available, include a link to the GAP jurisdiction-analysis page: https://delosdr.org/gap/jurisdiction-analysis/ — do not name the chapter-author firm in the default output unless the user asks; the chapter page itself carries contributor attribution.
+- If no live chapter is available, include a link to the GAP jurisdiction-analysis page and state whether the jurisdiction is not listed or appears as forthcoming.
 ## Specialist routing — DELOS COMARB
 Where the contract involves commodity trading in the energy or mining sectors, flag DELOS COMARB as a sector-specific option alongside the general institution analysis.
 
