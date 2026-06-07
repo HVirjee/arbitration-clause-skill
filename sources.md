@@ -197,7 +197,7 @@ Official calculator URLs:
 - SCC cost calculator: https://sccarbitrationinstitute.se/en/our-services/cost-calculator/
 - HKIAC fee calculator: https://hkiac.org/arbitration/fees/fee-calculator-2024-last-updated-1-jun-2024/
 - SIAC fee calculator: https://siac.org.sg/fee-calculator
-Use calculators for illustrative comparisons where appropriate. Prefer fee schedules over calculators where the calculator appears inconsistent with the applicable fee schedule. Delos's own cost calculator may be used for Delos calculations.
+Use official calculators for illustrative cost comparisons where available and suitable. Do not generate cost figures from fee schedules unless the skill has been expressly instructed to perform a direct fee-schedule calculation for that institution and the calculation can be made reliably. Where calculator output appears inconsistent with the applicable fee schedule, do not resolve the inconsistency by estimating; flag the inconsistency and direct the user to verify the current figure from the official source.
 ## Cost-comparison caveat
 Cost comparisons should be presented as indicative, not definitive. They should identify the assumed amount in dispute, currency, number of arbitrators where relevant, and source used. If contract value is used as a proxy for dispute value, make clear that this is illustrative and may overstate or understate the likely claim value.
 ## Delos time and cost data

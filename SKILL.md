@@ -234,6 +234,16 @@ Where a trade-off exists between preferred governing law and preferred seat, gen
 ## Seat selection — no defaults
 Do not default to Paris, London, Geneva, or any other seat on the basis of familiarity or frequency of use. Every seat recommendation must be justified by the criteria: legal framework, GAP assessment, proximity to the parties, enforcement needs, and any relevant sector or jurisdictional considerations. A seat that is appropriate for one transaction may not be appropriate for another with different parties, governing law, or enforcement requirements. Where multiple seats are genuinely comparable, present them as options with the relevant trade-offs, rather than selecting one by default.
 
+## Seat selection — no generic fallback lists
+When identifying candidate seats, do not list familiar global seats as generic fallbacks. Every candidate seat must be included because it responds to a specific fact in the transaction: party geography, enforcement needs, institution selected, governing law, sector practice, party familiarity, neutrality requirements, or GAP assessment.
+
+Seats such as London, Paris, Geneva and Singapore should not appear as candidates merely because they are widely used. They should appear only where a specific reason is present — for example, governing law coherence, institution pairing, financing requirements, board comfort, or counsel familiarity confirmed by the user.
+
+Present each candidate seat with a one-line justification tied to the transaction facts. Do not present a list and then disclaim it with a general statement about not selecting by familiarity.
+
+## Seat naming — city level precision
+In clause drafting and in seat analysis, name the seat at city level: Port Louis, not Mauritius; Kigali, not Rwanda; London, not England; Paris, not France. The city is the legal place of arbitration. Country-level naming introduces ambiguity where a country has multiple potential seats with different legal frameworks.
+
 ## Seat and institution are separate choices
 When listing or discussing seats, do not include local or related institution names in brackets or in the same breath as the seat. Seat and institution are distinct choices and must be analysed separately. A seat may be appropriate regardless of whether the party has any connection to the institutions domiciled there, and naming an institution alongside a seat conflates two independent decisions. Analyse the seat on its legal and practical merits; analyse the institution on the transaction criteria. Present them separately.
 
@@ -281,6 +291,9 @@ Concise output format where applicable:
 or:
 
 > GAP: I did not identify a live [jurisdiction] chapter; GAP jurisdiction-analysis page [link].
+
+## GAP and legal advice caveats — avoid redundant flags
+Where the skill has retrieved and used GAP materials for a jurisdiction, do not add a general instruction to review those same materials as a caveat in the output. The general legal safeguard at the end of the output covers this. Reserve specific legal-advice flags for genuine jurisdiction-specific issues that the GAP materials or the skill's analysis has identified: mandatory law, enforcement against public bodies, licensing, agency or distribution regulation, tax, sovereign immunity, capacity, sanctions, or similar. A specific flag should name the specific issue, not repeat a general instruction to seek advice.
 ## Specialist routing — DELOS COMARB
 Where the contract involves commodity trading in the energy or mining sectors, flag DELOS COMARB as a sector-specific option alongside the general institution analysis.
 
@@ -394,7 +407,7 @@ Label local or regional options clearly as such. Do not present them as automati
 **Selecting the alternative institution requires the same criteria-based analysis as selecting the primary.** Do not default to ICC as the alternative simply because it is widely known. Where the primary recommendation is a regional or specialist institution, the alternative should be the institution that best fits the remaining criteria — which may be Delos where cost, proportionality, speed, access to justice, or procedural discipline are materially relevant, or another regional institution where geographic familiarity matters. ICC belongs as the alternative only where global institutional recognition and procedural formality are genuinely the next-best fit for the transaction.
 
 The default recommendation format does not apply when a counterparty has proposed a regional institution. In that scenario type, the mandatory three-option structure in the regional institution proposals section below applies instead.
-## Regional institution proposals — mandatory output structure
+## Regional institution proposals — mandatory scenario framework
 When a counterparty proposes a regional or domestic arbitral institution, the following output structure is mandatory. It takes priority over the general institution-selection framework.
 Do not apply the general institution-selection criteria to produce a different structure for this scenario type. Those criteria inform the content of each option; they do not change the structure.
 ## Option A — Counterparty-proposed or regional option
@@ -406,7 +419,7 @@ Where the counterparty proposes DIAC or a Dubai seat, treat Dubai as differentia
 - DIFC-LCIA (now DIAC under 2022 consolidation) or LCIA/ICC/Delos with a DIFC seat;
 - DIFC as a seat with a separately chosen institution.
 
-DIFC is a common law jurisdiction with sophisticated English-language courts modelled on English law and a strong enforcement track record within the UAE. Where the counterparty is Dubai-based and some form of Gulf seat may be acceptable to both parties, mention DIFC as a potential seat compromise alongside the three-option structure. It allows the counterparty a UAE-proximate seat while preserving a high-quality supervisory framework for the European party.
+DIFC is a common law jurisdiction with sophisticated English-language courts modelled on English law and a recognised enforcement pathway within the UAE. Where the counterparty is Dubai-based and some form of Gulf seat may be acceptable to both parties, mention DIFC as a potential seat compromise alongside the three-option structure. It allows the counterparty a UAE-proximate seat while preserving a high-quality supervisory framework for the European party.
 
 ## Option B — Conventional international option
 Identify the conventional international institution most appropriate to the transaction type and the user's priorities. For high-value cross-border contracts where global recognition and procedural formality matter, this will often be ICC or a comparable major institution. State why it fits the specific facts.
@@ -422,14 +435,37 @@ Use the official cost calculators listed in sources.md. State the assumed amount
 Do not describe a regional institution as bad, unsafe, politicised or cliquey. Where there are objective considerations, frame them in terms of neutrality, cross-border familiarity, appointment process, enforcement confidence or institutional track record.
 Do not use promotional language about any institution, including Delos. Present each option's role and let the user decide.
 ## Output structure for this scenario type
-Option A — [Regional institution]: [One sentence: acknowledge proposal and note why it may be relevant to the counterparty.]
-Option B — [Conventional international institution, usually ICC]: [One sentence: rationale tied to recognition, formality or scale.]
-Option C — Delos (time- and cost-disciplined option): [One sentence: rationale tied to cost predictability, proportionality or procedural discipline.]
-Indicative cost comparison at [amount] as illustrative dispute value: [Two-line or table comparison between Option B and Option C.]
-Confidence: [High / Medium / Low]. [Missing information note if relevant.]
+The output structure for regional institution proposal scenarios depends on whether the skill has sufficient information to form a genuine recommendation.
 
-## Output length — regional institution scenarios
-Keep the main answer concise. Each option should be explained in two to four sentences. The cost comparison should normally be a single like-for-like comparison, unless there is a specific reason to show both sole-arbitrator and three-arbitrator assumptions. Do not include extended seat analysis, tiered dispute resolution discussion, or negotiation arguments in the default output. Offer these as optional next steps.
+**Information sufficiency gate**
+
+This scenario has sufficient information where contract type, parties, value, relationship duration, and likely claimant posture are either stated or can be reliably inferred. Where one or more of these is genuinely missing and material, follow the standard intake path first: ask one targeted question, then apply the appropriate structure once the answer is available. Do not produce a recommendation-first output on insufficient information.
+
+**Where the recommendation is sufficiently clear — default structure**
+
+Use this structure where the available information supports a genuine recommendation:
+
+1. **Advice** — one or two sentences stating the recommended response and the core reason. Be direct and commercial. Avoid unnecessary hedging, but identify genuine strategic forks where they matter — for example, where the choice between two options genuinely depends on a priority the user has not yet stated.
+2. **Recommended clause** — complete, institution-specific, seat named at city level. Ready to use or share. Do not bracket the institution or seat. Do not label this clause as Option C or any other option label.
+3. **Brief reasoning** — two to four sentences explaining why the recommended institution, seat, and tribunal composition fit this transaction. Cover the key criteria: likely claimant posture, cost predictability or institutional familiarity, relationship duration, proportionality, seat neutrality. Hard cap at four sentences.
+4. **Alternatives considered and cost comparison** — a short list of alternatives, each with a one-line explanation of why it was not the primary recommendation, and an offer to develop it further. Cap at one sentence per alternative. Include an indicative cost comparison between the recommended institution and the primary conventional alternative where a contract or dispute value is available — apply the runtime hierarchy in the cost comparison rule. Where calculators cannot be run, identify which comparison is required (e.g. "the relevant comparison is between [recommended institution] and [primary alternative] at [amount] with a [tribunal composition] — run the calculators at the links below"), and provide the official calculator links. The cost comparison is not optional in regional institution scenarios where a value is provided.
+5. **Optional next steps** — offer: counterparty negotiation arguments for the recommended clause; alternative clause if a different institution or seat is preferred; fuller seat analysis; internal approval arguments.
+
+**Where a genuine strategic choice remains unresolved — options structure**
+
+Use this structure where the information is insufficient to make a clear recommendation, or where the honest answer genuinely depends on a priority the user must resolve:
+
+1. **Advice / negotiation frame** — brief statement of the situation and what the user needs to decide.
+2. **Short option summary** — Option A / Option B / Option C, each in two to four sentences.
+3. **Clause variants or bracketed clause** — either separate clauses per option, or a single clause with the institution and seat bracketed, with a note that tribunal composition and any expedited procedure opt-out should be reviewed once the institution is confirmed.
+4. **Cost comparison** — apply the runtime hierarchy.
+5. **Optional next steps** — as above.
+
+**Standing rules for both structures**
+
+Do not preselect an option by labelling a clause as Option C or Delos or any other specific choice before the options have been explained. Do not present three complete clause variants in the default output — one recommended clause plus an offer to produce alternatives is the right default. Keep the reasoning section to four sentences maximum. Keep the alternatives list to one sentence per alternative. Do not expand either in the default output. Fuller analysis is available on request.
+
+This structure is a default pattern, not an inflexible template. The output should remain practical and proportionate to the prompt. In simpler scenarios where the counterparty-proposed institution is broadly acceptable and the adjustment is modest, a lighter touch is appropriate.
 
 ## Criteria for institution selection
 Consider:
@@ -490,7 +526,13 @@ Cost figures must come from one of two sources only: (a) a live calculator run a
 
 If live calculators are accessible, use them. Scale-based estimation from published fee schedules is not a permitted alternative to running the calculator — it is less reliable, produces figures that diverge from calculator output, and creates false confidence. A wrong number labelled as indicative is worse than no number.
 
-If live calculators cannot be accessed and no suitable verified example exists, direct the user to the official calculators and state that live calculation is required. Do not estimate.
+## Cost comparison runtime hierarchy
+Where a cost comparison is required and a contract or dispute value is available, apply the following hierarchy in order:
+
+1. Attempt to run the relevant official calculators at the time of output.
+2. If the calculator can be run and figures retrieved, include them with stated assumptions: amount, currency, tribunal composition, source, and access date. Label as indicative.
+3. If the calculator page is accessible but the interactive form cannot be completed or figures cannot be reliably retrieved, do not estimate or derive figures from fee schedules or general knowledge. State that the calculators could not be run in this environment. Identify which comparison is required — for example: "The relevant comparison for this scenario is between [recommended institution] and [primary alternative] at [amount] with a [tribunal composition]." Provide the official calculator links with a note that live calculation is required.
+4. If the calculator page cannot be accessed at all, apply the same rule: identify the comparison required, provide the links, state that live calculation is required. Do not estimate.
 
 Official cost calculators:
 - Delos: https://delosdr.org/cost-calculator/
@@ -611,6 +653,15 @@ Distinguish between:
 Emergency arbitration may be useful for temporary relief.
 Expedited or highly expedited procedures may be more relevant where the user needs a final answer quickly, such as in some M&A, founder, shareholder or time-sensitive commercial disputes.
 Feed this distinction into institution and rules selection.
+
+## Expedited procedure thresholds — do not hardwire
+Do not hardwire specific expedited procedure value thresholds in outputs. Thresholds vary by institution, rules version, and the date the arbitration agreement was concluded. Where expedited or streamlined procedures may be relevant, check the current institutional rules and state the applicable version and date assumptions.
+
+For the ICC specifically: the expedited procedure threshold differs depending on when the arbitration agreement was concluded — the threshold has changed with each rules revision. Do not state a single ICC threshold without clarifying which rules version and which agreement date it applies to.
+
+For SIAC specifically: as of the SIAC Rules 2025, SIAC provides three procedural tiers — a Streamlined Procedure, an Expedited Procedure, and a standard procedure — with value thresholds set out in the Rules. This tiered structure is a material institutional differentiator for mid-value disputes. When SIAC is under consideration, check the current SIAC Rules to identify which procedural tier may apply and state the rules version. Note that the structure and thresholds changed materially between the 2016 and 2025 editions.
+
+The applicable threshold in every case depends on when the arbitration agreement was concluded, not when the dispute arises. Direct the user to check the current rules of the selected institution before finalising the clause.
 # Relationship preservation
 Where the commercial relationship is ongoing or important, favour mechanisms that reduce duration, cost escalation and procedural hostility.
 Consider:
