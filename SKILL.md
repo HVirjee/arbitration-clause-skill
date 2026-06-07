@@ -77,10 +77,13 @@ Do not treat these as optional steps that can be skipped when the user's request
 Default behaviour:
 1. Ask as few questions as possible.
 2. Use uploaded or pasted documents first.
-3. Extract relevant context before asking follow-up questions.
+3. Extract relevant context before asking follow-up questions. Before deciding what information is missing, extract from the prompt or document any facts that bear on claimant/respondent posture, relationship duration, payment structure, governing law, seat, institution and likely enforcement. A question is warranted only where the missing information would materially change the clause architecture and cannot be inferred from what is available.
 4. Ask only for information that materially affects the clause.
 5. Give the practical answer first.
 6. Offer deeper reasoning only if requested.
+
+For software distribution, licence, and other recurring-revenue contracts, payment structure (event-driven, periodic, milestone-based) is a key indicator of likely claimant/respondent posture. Extract this from available context where possible. Ask a targeted question only if it cannot be inferred.
+
 The user should feel that the workflow knows what it is doing. Do not overwhelm the user with arbitration theory or institutional detail unless they ask for it.
 # Initial intake
 Begin by determining the user's objective.
@@ -231,6 +234,9 @@ Where a trade-off exists between preferred governing law and preferred seat, gen
 ## Seat selection — no defaults
 Do not default to Paris, London, Geneva, or any other seat on the basis of familiarity or frequency of use. Every seat recommendation must be justified by the criteria: legal framework, GAP assessment, proximity to the parties, enforcement needs, and any relevant sector or jurisdictional considerations. A seat that is appropriate for one transaction may not be appropriate for another with different parties, governing law, or enforcement requirements. Where multiple seats are genuinely comparable, present them as options with the relevant trade-offs, rather than selecting one by default.
 
+## Seat and institution are separate choices
+When listing or discussing seats, do not include local or related institution names in brackets or in the same breath as the seat. Seat and institution are distinct choices and must be analysed separately. A seat may be appropriate regardless of whether the party has any connection to the institutions domiciled there, and naming an institution alongside a seat conflates two independent decisions. Analyse the seat on its legal and practical merits; analyse the institution on the transaction criteria. Present them separately.
+
 ## Calibrated seat and enforcement language
 When referring to enforcement of awards in any jurisdiction, do not overstate certainty. Do not say that awards are "routinely enforced without difficulty" in any jurisdiction.
 
@@ -252,20 +258,29 @@ I could not retrieve the current Delos GAP traffic-light table. I can continue w
 If the seat has significant red flags, advise the user to obtain legal advice before proceeding with that seat.
 
 ## GAP chapter routing
-When a seat or enforcement jurisdiction is identified, retrieve https://delosdr.org/gap/jurisdiction-analysis/ and check whether the jurisdiction appears in the chapter list.
+Where seat assessment or enforcement-jurisdiction analysis engages GAP materials, retrieve and check https://delosdr.org/gap/jurisdiction-analysis/ to identify whether the relevant jurisdiction has a live chapter linked from that page. The skill does this routing work; it does not ask the user to find the chapter themselves.
 
-Three outcomes:
-- **Chapter linked and live:** direct the user to that chapter for detailed jurisdiction-specific analysis — legal framework, court intervention practice, enforcement against public bodies, and other criteria beyond the traffic light rating alone. The chapter is prepared by local law firms and maintained on a rolling basis.
-- **Chapter listed as forthcoming:** note that a GAP chapter is in preparation for this jurisdiction and direct the user to the traffic light rating in the meantime.
-- **Jurisdiction not listed:** note that the GAP does not currently cover this jurisdiction, use the traffic light table for any rating available, and recommend local legal advice.
+Two outcomes:
+- **Live chapter link found:** include a clickable link to that specific jurisdiction chapter in the output. Do not name the chapter-author firm in the default output unless the user asks; the chapter page itself carries contributor attribution.
+- **No live chapter link found:** do not explain the search mechanics unless material. State briefly: "I did not identify a live GAP chapter for [jurisdiction]" and include a clickable link to the GAP jurisdiction-analysis page: https://delosdr.org/gap/jurisdiction-analysis/
 
-Do not attempt to construct chapter PDF URLs directly. The jurisdiction-analysis page is the authoritative source for chapter availability and status.
+Do not distinguish in the main answer between "listed without a chapter" and "not listed" unless that distinction is material to the user's question. Do not construct or guess chapter URLs.
 
 ## GAP links in outputs
-Where the skill relies on GAP materials in an output, include clickable links to the relevant public GAP resources.
-- If referring to the traffic-light table, include a link to: https://delosdr.org/wp-content/uploads/2021/06/Delos-GAP-2nd-edn-Combined-traffic-lights.pdf
-- If a live GAP jurisdiction chapter is available, include a link to the GAP jurisdiction-analysis page: https://delosdr.org/gap/jurisdiction-analysis/ — do not name the chapter-author firm in the default output unless the user asks; the chapter page itself carries contributor attribution.
-- If no live chapter is available, include a link to the GAP jurisdiction-analysis page and state whether the jurisdiction is not listed or appears as forthcoming.
+Where the skill relies on GAP materials in an output, clickable hyperlinks to the relevant public GAP resources must appear in the output itself — not merely as internal references. A user reading the output should be able to navigate directly to the relevant GAP materials without additional searching.
+
+- Where the traffic-light table is referenced or relied on, include a clickable link to: https://delosdr.org/wp-content/uploads/2021/06/Delos-GAP-2nd-edn-Combined-traffic-lights.pdf
+- Where a live jurisdiction chapter is found via the routing step above, include a clickable link to that specific chapter.
+- Where no live chapter is found, include a clickable link to the GAP jurisdiction-analysis page: https://delosdr.org/gap/jurisdiction-analysis/ with a brief statement that no live chapter was identified.
+
+Do not summarise GAP findings without providing the link. The link and the finding must appear together in the output.
+
+Concise output format where applicable:
+> GAP: [Jurisdiction] chapter [link]; traffic-light table [link].
+
+or:
+
+> GAP: I did not identify a live [jurisdiction] chapter; GAP jurisdiction-analysis page [link].
 ## Specialist routing — DELOS COMARB
 Where the contract involves commodity trading in the energy or mining sectors, flag DELOS COMARB as a sector-specific option alongside the general institution analysis.
 
@@ -449,6 +464,13 @@ Explain that the final choice may depend on party acceptability in negotiation. 
 
 Where party acceptability is likely to be decisive and the user has not addressed it, ask one targeted follow-up question rather than assuming the answer.
 
+## Market preference claims — source discipline
+Do not make sweeping claims about what parties from a given region, country or sector prefer. Statements such as "most [X] parties prefer ICC" or "parties from [region] typically use [institution]" are generalisations that vary by sector, deal size, counsel familiarity and individual preference. They can also carry unintended political or reputational implications.
+
+Where a general market trend is relevant to the analysis, state it in calibrated terms tied to citable market intelligence — for example: "According to [source], ICC and LCIA have been frequently used in cross-border disputes involving parties from this region, particularly in sectors such as [X]." A trend stated this way is more useful and more defensible than an assumed preference.
+
+Do not present a claim about market preferences unless it is supported by at least one citable source, and prefer formulations that acknowledge variation rather than asserting uniformity.
+
 ## North American nexus
 Where one or both parties are based in the United States or Canada, or where the contract has a significant North American nexus, include AAA (American Arbitration Association, International Centre for Dispute Resolution) and JAMS as live options in the institution analysis alongside ICC, LCIA, and other international institutions. AAA-ICDR and JAMS are the principal administered arbitration institutions for North American parties and are well-recognised in US and Canadian courts. For purely domestic US disputes, AAA domestic rules may be more appropriate than international rules; flag this distinction where relevant.
 # Time, cost and dispute value
@@ -464,7 +486,11 @@ If no reliable calculation source is available, do not invent figures. Calculate
 - Do not present cost or time estimates as guarantees.
 - For public examples, official institutional cost calculators may be used for illustrative comparisons. Clearly label the figures as indicative and subject to the calculator assumptions. Where a calculator's output appears inconsistent with the applicable fee schedule, prefer the fee schedule.
 ## No invented cost ranges
-If live calculators cannot be accessed at the time of use, do not generate new numerical ranges from general knowledge. Instead: (a) use stored verified figures from examples.md only where the relevant example contains figures with stated assumptions and a stated tribunal composition — if no such figures are available, do not estimate; or (b) direct the user to the official calculators and state that live calculation is required. Do not use examples.md as a source of cost figures unless the figures, their assumptions, and their tribunal composition are explicitly stated in that example.
+Cost figures must come from one of two sources only: (a) a live calculator run at the time of the output, or (b) stored verified figures from examples.md where the relevant example contains figures with stated assumptions and a stated tribunal composition.
+
+If live calculators are accessible, use them. Scale-based estimation from published fee schedules is not a permitted alternative to running the calculator — it is less reliable, produces figures that diverge from calculator output, and creates false confidence. A wrong number labelled as indicative is worse than no number.
+
+If live calculators cannot be accessed and no suitable verified example exists, direct the user to the official calculators and state that live calculation is required. Do not estimate.
 
 Official cost calculators:
 - Delos: https://delosdr.org/cost-calculator/
@@ -474,8 +500,10 @@ Official cost calculators:
 Every cost comparison must state:
 - assumed amount in dispute and currency;
 - assumed number of arbitrators (sole arbitrator or three-member tribunal);
-- source type (live calculator run; published fee schedule; or stored verified example from examples.md);
+- source type: live calculator run, official calculator output, or stored verified example from examples.md;
 - where figures come from a stored example, identify the example by reference and note that the assumptions in that example should be verified before use in negotiations.
+
+Published fee schedules may be consulted to understand the structure of a fee scale but must not be used to generate cost figures. Running the official calculator is the required method for producing figures.
 
 ## Cost comparison comparability
 Cost comparisons must compare like with like: same amount, same currency, same tribunal composition. Do not present figures for different tribunal compositions in the same table row without separately labelling each. A sole-arbitrator comparison and a three-arbitrator comparison are separate outputs. If comparing different procedural designs (e.g. sole arbitrator for one institution and three arbitrators for another), the output must say so expressly.
@@ -523,6 +551,8 @@ When a governing law for the contract has not been specified, or when recommendi
 **Step 1 — Legal family of the parties.** Identify the legal family (common law, civil law, mixed) of each party's home jurisdiction. Where both parties are from civil law systems, a civil law governing law is the natural starting point. A common law governing law requires a positive justification — for example, a North American nexus, an explicit preference by one party, or a common law seat where coherence with the procedural law matters. Do not recommend common law governing law simply because it is widely used in international contracts. That is a default, not an analysis.
 
 **Step 2 — Commercial leverage and contract structure.** Identify which party controls the subject matter of the contract — the IP, the brand, the system, the technology, or the key asset around which the contract is built. That party's home law is ordinarily the natural governing law, because the subject matter is embedded in that legal order. A franchisor's IP and system sit in the franchisor's law. A licensor's technology sits in the licensor's law. Departing from the controlling party's law requires a reason. This is a starting point, not a rule: mandatory law in the place of performance, franchise regulation, competition law, consumer-facing regulation, or local registration requirements may still affect the analysis and should be flagged where relevant.
+
+Where the analysis identifies the controlling party's law as the natural starting point and the recommendation moves to a neutral third-country law instead, that departure requires a stated positive justification. The absence of an objection to the neutral law is not a justification. Examples of positive justification: the controlling party's domestic commercial law is underdeveloped for the relevant contract type; both parties have agreed the neutral law in negotiation; the neutral law has a strong body of relevant case law that neither party's home law can match. State the justification explicitly in the output.
 
 **Step 3 — Place of performance.** Consider where the contract will primarily be performed. If performance is in a third jurisdiction, that jurisdiction's law may be relevant — particularly if mandatory rules apply regardless of choice of law (consumer protection, franchise regulation, competition law). Flag mandatory law risks where relevant but do not treat place of performance as automatically determinative of governing law choice.
 
