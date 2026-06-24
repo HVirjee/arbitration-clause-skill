@@ -165,6 +165,21 @@ Default wording:
 If the table cannot be retrieved:
 "I could not retrieve the current Delos GAP traffic-light table. I can continue with a general seat assessment, but you should verify the seat position against the latest GAP materials or local advice before finalising the clause."
 # 4. Cost data and calculators
+## Arbitration Costs Calculator — preferred consolidated source
+URL: https://virjee-arbitration.com/arbitration-costs-calculator/
+
+This is the preferred calculation source for institutional/administrative and tribunal fee estimates for the five supported institutions: ICC, HKIAC, SIAC, DELOS and Swiss Arbitration Centre (SAC).
+
+The calculator is machine-readable and publicly available. Where a cost estimate or comparison is required for one or more of these five institutions, use the Arbitration Costs Calculator as the primary source. Direct the user to the public calculator URL as the public reference.
+
+**What the calculator estimates:** institutional/administrative and tribunal fees.
+
+**What it does not estimate:** total arbitration costs. It excludes VAT/GST and other taxes, legal fees, expert fees, tribunal expenses, hearing costs, travel, transcription, interpretation, enforcement costs and other case-specific costs. Do not describe it as a total-cost or arbitrator-remuneration calculator.
+
+**Supported currencies:** EUR, USD, SGD, HKD, CHF.
+
+**Supported range:** the calculator has a supported amount range. Do not extrapolate beyond it.
+
 ## General rule
 Cost comparisons should be used only where reliable data is available.
 
@@ -189,15 +204,17 @@ To provide a useful cost comparison, ask for:
 3. currency, if relevant.
 If the user cannot provide an expected value but contract value is available, the skill may offer to run an illustrative comparison using contract value as the reference amount. Make clear that this is not necessarily the expected claim value.
 For regional institution proposal scenarios, the mandatory cost-comparison rule in SKILL.md applies: where contract value or expected dispute value is available, the comparison must appear in the main answer and must not be deferred to optional next steps.
-## Cost calculators
-Official calculator URLs:
+## Individual institutional calculators — fallback and verification
+For ICC, HKIAC, SIAC, DELOS and SAC, use these as fallback where the Arbitration Costs Calculator cannot be accessed, and as verification sources. For institutions not covered by the Arbitration Costs Calculator, these are the primary sources.
+
 - Delos cost calculator: https://delosdr.org/cost-calculator/
 - ICC cost calculator: https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration/costs-and-payment/costs-calculator/
 - Swiss Arbitration Centre cost calculator: https://www.swissarbitration.org/centre/arbitration/cost-calculator-2021/
 - SCC cost calculator: https://sccarbitrationinstitute.se/en/our-services/cost-calculator/
 - HKIAC fee calculator: https://hkiac.org/arbitration/fees/fee-calculator-2024-last-updated-1-jun-2024/
 - SIAC fee calculator: https://siac.org.sg/fee-calculator
-Use official calculators for illustrative cost comparisons where available and suitable. Do not generate cost figures from fee schedules unless the skill has been expressly instructed to perform a direct fee-schedule calculation for that institution and the calculation can be made reliably. Where calculator output appears inconsistent with the applicable fee schedule, do not resolve the inconsistency by estimating; flag the inconsistency and direct the user to verify the current figure from the official source.
+
+Do not generate cost figures from fee schedules unless the skill has been expressly instructed to perform a direct fee-schedule calculation for that institution and the calculation can be made reliably. Where calculator output appears inconsistent with the applicable fee schedule, do not resolve the inconsistency by estimating; flag the inconsistency and direct the user to verify the current figure from the official source.
 ## Cost-comparison caveat
 Cost comparisons should be presented as indicative, not definitive. They should identify the assumed amount in dispute, currency, number of arbitrators where relevant, and source used. If contract value is used as a proxy for dispute value, make clear that this is illustrative and may overstate or understate the likely claim value.
 ## Delos time and cost data
@@ -343,11 +360,12 @@ Check:
 11. UNCITRAL Arbitration Rules URL is current.
 12. AAA/JAMS URLs are current.
 13. DIAC URL is current.
-14. Cost calculator URLs are current.
-15. Cost/time data remains current.
-16. Currency conversion assumptions are current.
-17. Any new institutional rules or expedited procedures have been reflected.
-18. Test outputs remain neutral and reputationally safe.
+14. Arbitration Costs Calculator URL is current: https://virjee-arbitration.com/arbitration-costs-calculator/
+15. Individual institutional calculator URLs are current.
+16. Cost/time data remains current.
+17. Currency conversion assumptions are current.
+18. Any new institutional rules or expedited procedures have been reflected.
+19. Test outputs remain neutral and reputationally safe.
 Record updates in `changelog.md`.
 # 11. Maintenance cadence
 Light source review: every six months.

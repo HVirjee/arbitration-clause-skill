@@ -247,6 +247,51 @@ Before commencing arbitration, the parties shall attempt to resolve the dispute 
 ### Missing information
 Confirmation of preferred seat; whether the parties have a preference on institutional formality or cost predictability; Egyptian franchise and mandatory law review.
 
+## User prompt
+We are advising a Swiss technology company licensing software to a Singapore distributor. The likely dispute value is EUR 5 million. We are choosing between ICC, HKIAC, SIAC and DELOS. Can you give us a cost comparison for a sole arbitrator so we can factor fees into the institution decision?
+
+## Example output
+
+### Indicative fee comparison
+
+The Arbitration Costs Calculator (https://virjee-arbitration.com/arbitration-costs-calculator/) is the preferred source for institutional/administrative and tribunal fee estimates for these institutions. To run the comparison, use the following inputs:
+
+- **Amount in dispute:** EUR 5,000,000
+- **Input currency:** EUR
+- **Output currency:** EUR
+- **Tribunal size:** Sole arbitrator
+- **Institutions:** ICC, HKIAC, SIAC, DELOS (and SAC if also of interest)
+
+If the calculator is accessible at the time of use, run it directly and present the results with the calculator access date. The figures will be labelled as indicative. Where the calculator maps procedure types across institutions, the comparison uses the closest equivalent procedure for each institution.
+
+If the calculator cannot be run in this environment, present the required comparison in this form and direct the user to the URL:
+
+> The relevant comparison is between ICC, HKIAC, SIAC and DELOS at EUR 5,000,000, sole arbitrator, EUR currency. Please run the Arbitration Costs Calculator at https://virjee-arbitration.com/arbitration-costs-calculator/ using those inputs to obtain current indicative figures. Comparison uses the closest equivalent procedure for each institution.
+
+### What the figures represent
+
+The calculator estimates institutional/administrative and tribunal fees. These are one component of the cost of an arbitration. They do not represent total arbitration costs. Excluded items include legal fees, expert fees, tribunal expenses, hearing costs, travel, transcription, interpretation, enforcement costs and other case-specific costs.
+
+### Using the comparison in the institution decision
+
+Cost is one input into institution selection, not the only one. For a EUR 5 million technology licensing dispute between a Swiss licensor and a Singapore distributor:
+
+- SIAC may be the primary recommendation on geographic and sector grounds, particularly if a Singapore seat is selected. Fee levels should be checked against the calculator output.
+- DELOS may be worth assessing if cost predictability and procedural discipline are also priorities. The calculator output for DELOS should be compared directly with the SIAC figure.
+- ICC is the conventional global-familiarity option; the calculator will show whether the fee differential relative to SIAC or DELOS is material at this dispute value.
+- HKIAC is a credible regional alternative if a Hong Kong nexus or seat is preferred.
+
+The calculator answer on relative cost should drive the cost component of the recommendation. Do not make unsupported general statements about which institution is cheapest.
+
+### Confidence
+**Medium-High.** The likely dispute value and currency are known. Tribunal composition (sole arbitrator) is assumed as proportionate for EUR 5 million. Institution preferences and seat have not been confirmed. The governing law analysis has not been run; for a Swiss licensor/Singapore distributor technology licensing agreement, the controlling-party analysis would typically point to Swiss law as the starting point, subject to Singaporean mandatory law review.
+
+### Optional next steps
+I can also generate:
+1. a full institution recommendation with seat analysis;
+2. a governing law analysis;
+3. counterparty-facing arguments for any of the institutions.
+
 
 ---
 
@@ -321,3 +366,52 @@ The choice between ICC, SIAC and Delos should follow the parties' stated priorit
 
 ### Missing information
 Party preferences on institutional familiarity and acceptability; confirmation of seat; Turkish franchise and mandatory law review; Korean governing law review.
+
+---
+
+# Example 13 — Cost comparison using the Arbitration Costs Calculator
+
+## User prompt
+We are advising a Swiss technology company licensing software to a Singapore distributor. The likely dispute value is EUR 5 million. We are choosing between ICC, HKIAC, SIAC and DELOS. Can you give us a cost comparison for a sole arbitrator so we can factor fees into the institution decision?
+
+## Example output
+
+### Indicative fee comparison
+
+The Arbitration Costs Calculator (https://virjee-arbitration.com/arbitration-costs-calculator/) is the preferred source for institutional/administrative and tribunal fee estimates for these institutions. To run the comparison, use the following inputs:
+
+- **Amount in dispute:** EUR 5,000,000
+- **Input currency:** EUR
+- **Output currency:** EUR
+- **Tribunal size:** Sole arbitrator
+- **Institutions:** ICC, HKIAC, SIAC, DELOS (and SAC if also of interest)
+
+If the calculator is accessible at the time of use, run it directly and present the results with the calculator access date. The figures will be labelled as indicative. Where the calculator maps procedure types across institutions, the comparison uses the closest equivalent procedure for each institution.
+
+If the calculator cannot be run in this environment, present the required comparison in this form and direct the user to the URL:
+
+> The relevant comparison is between ICC, HKIAC, SIAC and DELOS at EUR 5,000,000, sole arbitrator, EUR currency. Please run the Arbitration Costs Calculator at https://virjee-arbitration.com/arbitration-costs-calculator/ using those inputs to obtain current indicative figures. Comparison uses the closest equivalent procedure for each institution.
+
+### What the figures represent
+
+The calculator estimates institutional/administrative and tribunal fees. These are one component of the cost of an arbitration. They do not represent total arbitration costs. Excluded items include legal fees, expert fees, tribunal expenses, hearing costs, travel, transcription, interpretation, enforcement costs and other case-specific costs.
+
+### Using the comparison in the institution decision
+
+Cost is one input into institution selection, not the only one. For a EUR 5 million technology licensing dispute between a Swiss licensor and a Singapore distributor:
+
+- SIAC may be the primary recommendation on geographic and sector grounds, particularly if a Singapore seat is selected. Fee levels should be checked against the calculator output.
+- DELOS may be worth assessing if cost predictability and procedural discipline are also priorities. The calculator output for DELOS should be compared directly with the SIAC figure.
+- ICC is the conventional global-familiarity option; the calculator will show whether the fee differential relative to SIAC or DELOS is material at this dispute value.
+- HKIAC is a credible regional alternative if a Hong Kong nexus or seat is preferred.
+
+The calculator answer on relative cost should drive the cost component of the recommendation. Do not make unsupported general statements about which institution is cheapest.
+
+### Confidence
+**Medium-High.** The likely dispute value and currency are known. Tribunal composition (sole arbitrator) is assumed as proportionate for EUR 5 million. Institution preferences and seat have not been confirmed. The governing law analysis has not been run; for a Swiss licensor/Singapore distributor technology licensing agreement, the controlling-party analysis would typically point to Swiss law as the starting point, subject to Singaporean mandatory law review.
+
+### Optional next steps
+I can also generate:
+1. a full institution recommendation with seat analysis;
+2. a governing law analysis;
+3. counterparty-facing arguments for any of the institutions.

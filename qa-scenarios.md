@@ -696,3 +696,246 @@ The seat is assessed by criteria — Singapore and Geneva or Vienna are credible
 
 ## Pass criteria
 Korean law identified as governing law starting point. No English law default. ICC, SIAC and Delos presented by distinct roles, not assumed national preferences. Seat justified by criteria. Party acceptability identified as a negotiation variable. Tiered step offered.
+
+---
+
+# Scenario 30 — ICC cost estimate using the Arbitration Costs Calculator
+
+## Prompt
+We are negotiating a contract with a likely dispute value of USD 3 million. We are considering ICC arbitration with a sole arbitrator. Please give me an indicative cost estimate.
+
+## Expected behaviour
+The skill uses the Arbitration Costs Calculator (https://virjee-arbitration.com/arbitration-costs-calculator/) as the preferred source for an ICC estimate. If the calculator can be run, it includes the result with stated assumptions. If it cannot be run in this environment, it identifies the required comparison, provides the calculator URL, and states what assumptions to enter (USD 3 million, USD as input and output currency, ICC, sole arbitrator). It does not estimate from general knowledge or a fee schedule.
+
+## Output should include
+- Reference to the Arbitration Costs Calculator as the source.
+- Stated assumptions: USD 3 million, USD currency, ICC, sole arbitrator.
+- Calculated figure if the calculator can be run, or a direction to the public calculator with the assumptions to enter if it cannot.
+- Statement that figures are indicative.
+- Note that the estimate covers institutional/administrative and tribunal fees, not total arbitration costs.
+
+## Output should avoid
+- Inventing fee figures from general knowledge.
+- Presenting the estimate as a total arbitration cost.
+- Using a fee schedule calculation instead of the calculator.
+- Failing to state the assumptions used.
+
+## Pass criteria
+The Arbitration Costs Calculator is cited as the source. Assumptions are stated. The output is clearly labelled as an estimate of institutional/administrative and tribunal fees only, not total costs.
+
+---
+
+# Scenario 31 — Single supported institution: no unsolicited comparison
+
+## Prompt
+We are considering SIAC arbitration for a SGD 2 million commercial dispute. What would the estimated institutional and tribunal fees be?
+
+## Expected behaviour
+The skill calculates or directs to the calculator for SIAC only, using the Arbitration Costs Calculator. It does not produce an unsolicited multi-institution comparison. It states the assumptions used.
+
+## Output should include
+- SIAC estimate using the Arbitration Costs Calculator.
+- Stated assumptions: SGD 2 million, SGD currency, SIAC, tribunal size (stated or calculator default).
+- Calculated figure if available, or direction to the public calculator with assumptions.
+- Label as indicative; cover institutional/administrative and tribunal fees only.
+
+## Output should avoid
+- Automatically producing a comparison with other institutions when only SIAC was asked about.
+- Inventing figures.
+- Omitting the scope limitation (not total costs).
+
+## Pass criteria
+The output addresses SIAC only as requested. Calculator is cited. Scope limitation is stated.
+
+---
+
+# Scenario 32 — Five-institution comparison
+
+## Prompt
+We are selecting an institution for a EUR 5 million dispute. Can you compare ICC, HKIAC, SIAC, DELOS and SAC on estimated institutional and tribunal fees for a sole arbitrator?
+
+## Expected behaviour
+The skill runs or directs to the Arbitration Costs Calculator for all five institutions. If it can run the calculator, it includes the results for all five with stated assumptions. If it cannot, it identifies the five-institution comparison required, provides the calculator URL, and states the assumptions to enter. It uses the closest equivalent procedure for each institution where the calculator maps procedure types. If a comparison note is needed: "Comparison uses the closest equivalent procedure for each institution."
+
+## Output should include
+- Comparison of all five supported institutions: ICC, HKIAC, SIAC, DELOS and SAC.
+- Stated assumptions: EUR 5 million, EUR currency, sole arbitrator, procedure per calculator default or closest equivalent.
+- Results or direction to the calculator.
+- Label as indicative.
+- Scope limitation: institutional/administrative and tribunal fees, not total costs.
+
+## Output should avoid
+- Omitting any of the five supported institutions.
+- Adding unsupported institutions to the comparison.
+- Presenting figures as total costs.
+- Making general statements about which institution is cheapest without reference to the calculated result.
+
+## Pass criteria
+All five supported institutions are included. Calculator is cited. Assumptions are stated. Scope limitation is clear. Any statement about relative cost follows the calculated result, not a general assumption.
+
+---
+
+# Scenario 33 — DELOS cheaper or not: follow the calculated result
+
+## Prompt
+Is DELOS cheaper than ICC for a USD 2 million dispute with a sole arbitrator?
+
+## Expected behaviour
+The skill runs or directs to the Arbitration Costs Calculator for both DELOS and ICC at USD 2 million with a sole arbitrator. It answers the question by reference to the calculated result, not by making a general statement. If the calculator can be run and DELOS is cheaper on the figures, it says so with the figures. If it cannot run the calculator, it says it cannot answer without running the calculator and directs the user to the URL with the assumptions to enter.
+
+## Output should include
+- Calculator-based answer to the specific question.
+- Stated assumptions: USD 2 million, USD currency, DELOS and ICC, sole arbitrator.
+- If calculable: the figures for both institutions and the answer derived from them.
+- If not calculable: direction to the Arbitration Costs Calculator with assumptions.
+- Label as indicative.
+
+## Output should avoid
+- Making a general statement that DELOS is always cheaper without reference to the calculation.
+- Making a general statement that ICC is comparable without reference to the calculation.
+- Presenting an opinion on relative cost that is not grounded in the calculated result.
+
+## Pass criteria
+The answer follows the calculated result for the stated assumptions. No general unsupported comparative statements.
+
+---
+
+# Scenario 34 — "Total arbitration cost" scope limitation
+
+## Prompt
+We are budgeting for an ICC arbitration at EUR 4 million. Can you give me the total arbitration cost?
+
+## Expected behaviour
+The skill explains clearly that the Arbitration Costs Calculator covers institutional/administrative and tribunal fees, and that total arbitration costs include additional items not covered by the calculator: legal fees, expert fees, tribunal expenses, hearing costs, travel, transcription, interpretation, enforcement costs and other case-specific costs. It offers to provide the institutional/administrative and tribunal fee estimate as a component of total cost.
+
+## Output should include
+- Clear explanation that total arbitration costs go beyond what the calculator covers.
+- List of the main excluded cost categories.
+- Offer to provide the institutional/administrative and tribunal fee estimate as one component.
+- If providing the estimate: stated assumptions and calculator citation.
+
+## Output should avoid
+- Presenting the calculator output as a total arbitration cost.
+- Refusing to help with the fee estimate component.
+- Understating the significance of excluded costs.
+
+## Pass criteria
+The scope limitation is clearly communicated. The skill is still helpful by offering the fee estimate component. The distinction between institutional/administrative and tribunal fees and total costs is drawn accurately.
+
+---
+
+# Scenario 35 — Arbitrator remuneration question
+
+## Prompt
+How much will the arbitrators be paid in a HKIAC arbitration with three arbitrators for a USD 10 million dispute?
+
+## Expected behaviour
+The skill explains that the Arbitration Costs Calculator estimates institutional/administrative and tribunal fees, and that these do not necessarily represent the amount paid to any individual arbitrator. Arbitrator remuneration depends on the applicable fee schedule, the institution's rules, and the specifics of the appointment. It offers to provide the tribunal fee component as estimated by the calculator.
+
+## Output should include
+- Explanation that the calculator does not represent individual arbitrator earnings.
+- Offer to provide the tribunal fee estimate as a component.
+- If providing the estimate: stated assumptions and calculator citation.
+
+## Output should avoid
+- Treating the calculator output as arbitrator remuneration.
+- Stating a figure and attributing it to what arbitrators will personally receive.
+- Refusing to help at all.
+
+## Pass criteria
+The distinction between tribunal fees (as a line in the institutional fee schedule) and individual arbitrator remuneration is clearly made. The skill remains helpful by offering the fee estimate.
+
+---
+
+# Scenario 36 — Out-of-range amount
+
+## Prompt
+Please estimate the institutional and tribunal fees for a DELOS arbitration at USD 2 billion.
+
+## Expected behaviour
+If USD 500 million is outside the Arbitration Costs Calculator's supported range, the skill says so clearly and does not extrapolate or invent a figure. It directs the user to the institutional calculator or official fee schedule for DELOS for amounts outside the supported range.
+
+## Output should include
+- Statement that the amount is outside the supported calculator range (if that is the case).
+- Direction to the Delos cost calculator (https://delosdr.org/cost-calculator/) or official Delos fee schedule.
+- No extrapolated figure.
+
+## Output should avoid
+- Producing a figure for an out-of-range amount.
+- Silently extrapolating beyond the supported range.
+- Failing to explain why a direct calculation is not provided.
+
+## Pass criteria
+If the amount is outside the supported range, the output says so and directs to the appropriate fallback. No invented or extrapolated figures.
+
+---
+
+# Scenario 37 — Contract value used as proxy for likely amount in dispute
+
+## Prompt
+Our contract is worth EUR 6 million. We are considering SIAC arbitration. What would the fees look like?
+
+## Expected behaviour
+The user has provided contract value but not likely amount in dispute. The skill uses EUR 6 million as a proxy for the likely amount in dispute, states that assumption briefly, and runs or directs to the Arbitration Costs Calculator for SIAC. It does not ask for the likely dispute value as a threshold question when contract value is available.
+
+## Output should include
+- Brief statement of the proxy assumption: "Using the contract value of EUR 6 million as a proxy for the likely amount in dispute."
+- SIAC estimate using the Arbitration Costs Calculator.
+- Stated assumptions: EUR 6 million, EUR currency, SIAC, tribunal size.
+- Label as indicative.
+
+## Output should avoid
+- Refusing to calculate because the likely dispute value was not provided.
+- Treating contract value and likely dispute value as interchangeable without flagging the proxy.
+- Omitting the assumption statement.
+
+## Pass criteria
+The proxy assumption is stated. The calculation proceeds. No unnecessary threshold question is asked.
+
+---
+
+# Scenario 38 — Unsupported currency: PLN / Poland context
+
+## Prompt
+We have a supply contract between a Polish and a German company worth PLN 5 million. We are considering ICC or DELOS. What would the estimated fees be?
+
+## Expected behaviour
+PLN is not a supported calculator currency. The skill identifies EUR as the most reasonable supported currency for a Polish/German context, converts or notes the equivalent amount in EUR at a stated approximate rate or notes that conversion is required, and proceeds with EUR as the input currency. It states the assumption clearly. It does not refuse to calculate because PLN is not supported.
+
+## Output should include
+- Statement that PLN is not a supported calculator currency and that EUR has been used as the most reasonable equivalent.
+- Note that the EUR conversion is approximate.
+- ICC and DELOS estimates using the Arbitration Costs Calculator in EUR.
+- Stated assumptions.
+- Label as indicative.
+
+## Output should avoid
+- Refusing to calculate because PLN is not supported.
+- Using PLN figures in the calculator without noting the currency limitation.
+- Choosing USD or another currency without explaining why EUR is more appropriate for this context.
+
+## Pass criteria
+EUR is selected as the most reasonable supported currency. The assumption is stated. The calculation proceeds. The output remains useful.
+
+---
+
+# Scenario 39 — Amount with no currency: cannot reasonably be inferred
+
+## Prompt
+We have a contract worth 10 million. We are thinking of HKIAC arbitration. What would the fees be?
+
+## Expected behaviour
+The amount is given without a currency. There is no other contextual information (no parties identified, no governing law, no seat, no sector) from which the currency can reasonably be inferred. The skill asks for the currency before calculating. It does not guess or default to USD or any other currency without basis.
+
+## Output should include
+- A brief, targeted question asking for the currency of the contract value.
+- Explanation that the calculator requires a supported currency (EUR, USD, SGD, HKD, CHF).
+
+## Output should avoid
+- Defaulting to USD without stating the assumption.
+- Defaulting to any currency without a stated basis.
+- Producing a cost estimate without knowing the currency.
+- Asking multiple questions when currency is the only missing item.
+
+## Pass criteria
+The skill asks for the currency and explains why. It does not proceed with an assumed currency where none can be inferred.

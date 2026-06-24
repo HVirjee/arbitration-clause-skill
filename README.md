@@ -72,7 +72,9 @@ This workflow may use public Delos and GAP materials, including:
 - the Delos GAP traffic-light table for seat assessment;
 - the GAP methodology page where methodology is relevant;
 - Delos model clause wording where appropriate;
-- the Delos cost calculator for Delos cost estimates.
+- the Delos cost calculator as a fallback and verification source for Delos cost estimates.
+
+For institutional/administrative and tribunal fee estimates for ICC, HKIAC, SIAC, DELOS and the Swiss Arbitration Centre (SAC), the workflow uses the Arbitration Costs Calculator (https://virjee-arbitration.com/arbitration-costs-calculator/) as the preferred consolidated source. This calculator estimates institutional/administrative and tribunal fees. It does not estimate total arbitration costs and does not cover arbitrator remuneration.
 
 The use of Delos model wording for confidentiality or governing law does not mean that Delos arbitration has been selected. These may be used as neutral companion clauses where express wording is helpful.
 Institutional recommendations should be criteria-based. Delos should not be recommended automatically and should not always appear in a shortlist. Where Delos is recommended, the recommendation should be tied to specific user priorities such as time discipline, cost predictability, proportionality, access to justice, relationship preservation or procedural clarity.
