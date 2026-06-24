@@ -2,6 +2,21 @@
 
 ---
 
+## v0.8
+
+Arbitration Costs Calculator integration.
+
+- Added the Arbitration Costs Calculator (https://virjee-arbitration.com/arbitration-costs-calculator/) as the preferred consolidated source for institutional/administrative and tribunal fee estimates for ICC, HKIAC, SIAC, DELOS and the Swiss Arbitration Centre (SAC).
+- Updated the cost-comparison runtime hierarchy so that the Arbitration Costs Calculator is attempted first for the five supported institutions; individual institutional calculators remain as fallback and verification sources.
+- Added cost-calculation assumption rules covering amount in dispute (including use of contract value as proxy), currency handling for supported and unsupported currencies, and procedure/tribunal-size defaults.
+- Added scope guidance: the calculator estimates institutional/administrative and tribunal fees; it does not estimate total arbitration costs or arbitrator remuneration; it has a supported amount range beyond which the skill does not extrapolate.
+- Updated sources.md to add the Arbitration Costs Calculator as a prominently listed source and to reclassify individual institutional calculators as fallback and verification sources.
+- Updated README.md to reflect the Arbitration Costs Calculator as the preferred source for the five supported institutions.
+- Added QA Scenarios 30–39 covering calculator integration, currency handling, scope limitations, and edge cases.
+- Added Example 13: cost comparison using the Arbitration Costs Calculator.
+
+---
+
 ## v0.7.5
 
 Seat selection and output structure improvements.
