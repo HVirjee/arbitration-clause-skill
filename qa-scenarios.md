@@ -853,7 +853,7 @@ The distinction between tribunal fees (as a line in the institutional fee schedu
 Please estimate the institutional and tribunal fees for a DELOS arbitration at USD 2 billion.
 
 ## Expected behaviour
-If USD 500 million is outside the Arbitration Costs Calculator's supported range, the skill says so clearly and does not extrapolate or invent a figure. It directs the user to the institutional calculator or official fee schedule for DELOS for amounts outside the supported range.
+If USD 2 billion is outside the Arbitration Costs Calculator's supported range, the skill says so clearly and does not extrapolate or invent a figure. It directs the user to the institutional calculator or official fee schedule for DELOS for amounts outside the supported range.
 
 ## Output should include
 - Statement that the amount is outside the supported calculator range (if that is the case).
