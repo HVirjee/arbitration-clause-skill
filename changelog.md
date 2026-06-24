@@ -2,6 +2,20 @@
 
 ---
 
+## v0.8.1
+
+Clarified the Arbitration Costs Calculator integration to distinguish the human-facing calculator page from the machine-readable specification page; updated cost-calculation instructions, sources, examples and QA scenarios accordingly.
+
+- Updated the cost comparison runtime hierarchy in SKILL.md to use the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/) as the machine/runtime calculation path, and the human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/) as the human fallback. Removed the implication that the interactive form of the human-facing page is the primary machine path.
+- Added a note to the Arbitration Costs Calculator scope section in SKILL.md clarifying the two-page architecture and confirming that no server-side result endpoint exists.
+- Updated sources.md Section 4 to name both pages with their respective roles, and expanded maintenance checklist item 14 to cover both URLs.
+- Added a sentence to README.md noting the machine-readable specification page for tool/runtime use.
+- Removed an unlabelled duplicate of the cost-comparison example that had been left in examples.md between Example 11 and Example 12.
+- Updated Example 13 in examples.md to reflect the two-path approach: machine-readable specification for direct calculation; human-facing page as fallback.
+- Updated QA Scenarios 30–33 and 36–39 in qa-scenarios.md so that expected behaviour, output criteria and pass criteria reflect the two-path logic, no server-side endpoint, and no reliance on query URLs as guaranteed machine-result endpoints.
+
+---
+
 ## v0.8
 
 Arbitration Costs Calculator integration.

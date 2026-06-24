@@ -705,12 +705,12 @@ Korean law identified as governing law starting point. No English law default. I
 We are negotiating a contract with a likely dispute value of USD 3 million. We are considering ICC arbitration with a sole arbitrator. Please give me an indicative cost estimate.
 
 ## Expected behaviour
-The skill uses the Arbitration Costs Calculator (https://virjee-arbitration.com/arbitration-costs-calculator/) as the preferred source for an ICC estimate. If the calculator can be run, it includes the result with stated assumptions. If it cannot be run in this environment, it identifies the required comparison, provides the calculator URL, and states what assumptions to enter (USD 3 million, USD as input and output currency, ICC, sole arbitrator). It does not estimate from general knowledge or a fee schedule.
+The skill uses the Arbitration Costs Calculator as the preferred source for an ICC estimate. It first attempts to calculate directly using the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/) and the exposed public data bundle. If direct calculation is possible, it includes the result with stated assumptions (USD 3 million, USD currency, ICC, sole arbitrator, access date). If direct calculation is not possible, it directs the user to the human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/) with the specific inputs to enter. It does not treat query URLs as guaranteed machine-result endpoints. It does not estimate from general knowledge or a fee schedule.
 
 ## Output should include
 - Reference to the Arbitration Costs Calculator as the source.
 - Stated assumptions: USD 3 million, USD currency, ICC, sole arbitrator.
-- Calculated figure if the calculator can be run, or a direction to the public calculator with the assumptions to enter if it cannot.
+- Calculated figure if direct calculation from the machine-readable specification is possible, or a direction to the human-facing calculator page with the inputs to enter if it is not.
 - Statement that figures are indicative.
 - Note that the estimate covers institutional/administrative and tribunal fees, not total arbitration costs.
 
@@ -719,9 +719,11 @@ The skill uses the Arbitration Costs Calculator (https://virjee-arbitration.com/
 - Presenting the estimate as a total arbitration cost.
 - Using a fee schedule calculation instead of the calculator.
 - Failing to state the assumptions used.
+- Treating query URLs or share URLs as guaranteed machine-result endpoints.
+- Implying that a server-side result endpoint exists.
 
 ## Pass criteria
-The Arbitration Costs Calculator is cited as the source. Assumptions are stated. The output is clearly labelled as an estimate of institutional/administrative and tribunal fees only, not total costs.
+The Arbitration Costs Calculator is cited as the source. The two-path logic is followed: direct calculation from the machine-readable specification where possible; human-facing page with stated inputs as fallback. Assumptions are stated. The output is clearly labelled as an estimate of institutional/administrative and tribunal fees only, not total costs.
 
 ---
 
@@ -731,21 +733,23 @@ The Arbitration Costs Calculator is cited as the source. Assumptions are stated.
 We are considering SIAC arbitration for a SGD 2 million commercial dispute. What would the estimated institutional and tribunal fees be?
 
 ## Expected behaviour
-The skill calculates or directs to the calculator for SIAC only, using the Arbitration Costs Calculator. It does not produce an unsolicited multi-institution comparison. It states the assumptions used.
+The skill calculates or directs to the calculator for SIAC only, using the Arbitration Costs Calculator. It first attempts direct calculation from the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/). If that is not possible, it directs the user to the human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/) with the specific inputs. It does not produce an unsolicited multi-institution comparison. It states the assumptions used.
 
 ## Output should include
 - SIAC estimate using the Arbitration Costs Calculator.
 - Stated assumptions: SGD 2 million, SGD currency, SIAC, tribunal size (stated or calculator default).
-- Calculated figure if available, or direction to the public calculator with assumptions.
+- Calculated figure if direct calculation from the machine-readable specification is possible, or direction to the human-facing calculator page with assumptions if not.
 - Label as indicative; cover institutional/administrative and tribunal fees only.
 
 ## Output should avoid
 - Automatically producing a comparison with other institutions when only SIAC was asked about.
 - Inventing figures.
 - Omitting the scope limitation (not total costs).
+- Treating query URLs or share URLs as guaranteed machine-result endpoints.
+- Implying that a server-side result endpoint exists.
 
 ## Pass criteria
-The output addresses SIAC only as requested. Calculator is cited. Scope limitation is stated.
+The output addresses SIAC only as requested. Calculator is cited. Two-path logic is followed. Scope limitation is stated.
 
 ---
 
@@ -755,12 +759,12 @@ The output addresses SIAC only as requested. Calculator is cited. Scope limitati
 We are selecting an institution for a EUR 5 million dispute. Can you compare ICC, HKIAC, SIAC, DELOS and SAC on estimated institutional and tribunal fees for a sole arbitrator?
 
 ## Expected behaviour
-The skill runs or directs to the Arbitration Costs Calculator for all five institutions. If it can run the calculator, it includes the results for all five with stated assumptions. If it cannot, it identifies the five-institution comparison required, provides the calculator URL, and states the assumptions to enter. It uses the closest equivalent procedure for each institution where the calculator maps procedure types. If a comparison note is needed: "Comparison uses the closest equivalent procedure for each institution."
+The skill uses the Arbitration Costs Calculator for all five institutions, following the two-path logic. It first attempts direct calculation using the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/). If that is not possible, it identifies the five-institution comparison required, directs the user to the human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/), and states the assumptions to enter. It uses the closest equivalent procedure for each institution where the calculator maps procedure types. If a comparison note is needed: "Comparison uses the closest equivalent procedure for each institution."
 
 ## Output should include
 - Comparison of all five supported institutions: ICC, HKIAC, SIAC, DELOS and SAC.
 - Stated assumptions: EUR 5 million, EUR currency, sole arbitrator, procedure per calculator default or closest equivalent.
-- Results or direction to the calculator.
+- Calculated results if direct calculation from the machine-readable specification is possible, or direction to the human-facing calculator page with assumptions if not.
 - Label as indicative.
 - Scope limitation: institutional/administrative and tribunal fees, not total costs.
 
@@ -769,9 +773,11 @@ The skill runs or directs to the Arbitration Costs Calculator for all five insti
 - Adding unsupported institutions to the comparison.
 - Presenting figures as total costs.
 - Making general statements about which institution is cheapest without reference to the calculated result.
+- Treating query URLs or share URLs as guaranteed machine-result endpoints.
+- Implying that a server-side result endpoint exists.
 
 ## Pass criteria
-All five supported institutions are included. Calculator is cited. Assumptions are stated. Scope limitation is clear. Any statement about relative cost follows the calculated result, not a general assumption.
+All five supported institutions are included. Calculator is cited. Two-path logic is followed. Assumptions are stated. Scope limitation is clear. Any statement about relative cost follows the calculated result, not a general assumption.
 
 ---
 
@@ -781,22 +787,24 @@ All five supported institutions are included. Calculator is cited. Assumptions a
 Is DELOS cheaper than ICC for a USD 2 million dispute with a sole arbitrator?
 
 ## Expected behaviour
-The skill runs or directs to the Arbitration Costs Calculator for both DELOS and ICC at USD 2 million with a sole arbitrator. It answers the question by reference to the calculated result, not by making a general statement. If the calculator can be run and DELOS is cheaper on the figures, it says so with the figures. If it cannot run the calculator, it says it cannot answer without running the calculator and directs the user to the URL with the assumptions to enter.
+The skill uses the Arbitration Costs Calculator for both DELOS and ICC at USD 2 million with a sole arbitrator, following the two-path logic. It first attempts direct calculation using the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/). If direct calculation is possible and DELOS is cheaper on the figures, it says so with the figures. If direct calculation is not possible, it directs the user to the human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/) with the assumptions to enter, and does not answer the question without the calculated result.
 
 ## Output should include
 - Calculator-based answer to the specific question.
 - Stated assumptions: USD 2 million, USD currency, DELOS and ICC, sole arbitrator.
-- If calculable: the figures for both institutions and the answer derived from them.
-- If not calculable: direction to the Arbitration Costs Calculator with assumptions.
+- If direct calculation is possible: the figures for both institutions and the answer derived from them.
+- If not: direction to the human-facing calculator page with the specific assumptions to enter.
 - Label as indicative.
 
 ## Output should avoid
 - Making a general statement that DELOS is always cheaper without reference to the calculation.
 - Making a general statement that ICC is comparable without reference to the calculation.
 - Presenting an opinion on relative cost that is not grounded in the calculated result.
+- Treating query URLs or share URLs as guaranteed machine-result endpoints.
+- Implying that a server-side result endpoint exists.
 
 ## Pass criteria
-The answer follows the calculated result for the stated assumptions. No general unsupported comparative statements.
+The answer follows the calculated result for the stated assumptions. Two-path logic is followed. No general unsupported comparative statements.
 
 ---
 
@@ -853,7 +861,7 @@ The distinction between tribunal fees (as a line in the institutional fee schedu
 Please estimate the institutional and tribunal fees for a DELOS arbitration at USD 2 billion.
 
 ## Expected behaviour
-If USD 2 billion is outside the Arbitration Costs Calculator's supported range, the skill says so clearly and does not extrapolate or invent a figure. It directs the user to the institutional calculator or official fee schedule for DELOS for amounts outside the supported range.
+The skill first attempts to consult the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/) to determine whether USD 2 billion falls within the supported range. If the amount is outside the supported range, the skill says so clearly and does not extrapolate or invent a figure. It directs the user to the Delos institutional calculator or official fee schedule for amounts outside the supported range.
 
 ## Output should include
 - Statement that the amount is outside the supported calculator range (if that is the case).
@@ -864,6 +872,7 @@ If USD 2 billion is outside the Arbitration Costs Calculator's supported range, 
 - Producing a figure for an out-of-range amount.
 - Silently extrapolating beyond the supported range.
 - Failing to explain why a direct calculation is not provided.
+- Treating query URLs or share URLs as guaranteed machine-result endpoints.
 
 ## Pass criteria
 If the amount is outside the supported range, the output says so and directs to the appropriate fallback. No invented or extrapolated figures.
@@ -876,7 +885,7 @@ If the amount is outside the supported range, the output says so and directs to 
 Our contract is worth EUR 6 million. We are considering SIAC arbitration. What would the fees look like?
 
 ## Expected behaviour
-The user has provided contract value but not likely amount in dispute. The skill uses EUR 6 million as a proxy for the likely amount in dispute, states that assumption briefly, and runs or directs to the Arbitration Costs Calculator for SIAC. It does not ask for the likely dispute value as a threshold question when contract value is available.
+The user has provided contract value but not likely amount in dispute. The skill uses EUR 6 million as a proxy for the likely amount in dispute, states that assumption briefly, and calculates or directs using the Arbitration Costs Calculator for SIAC. It first attempts direct calculation from the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/). If not possible, it directs to the human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/) with the inputs. It does not ask for the likely dispute value as a threshold question when contract value is available.
 
 ## Output should include
 - Brief statement of the proxy assumption: "Using the contract value of EUR 6 million as a proxy for the likely amount in dispute."
@@ -888,9 +897,10 @@ The user has provided contract value but not likely amount in dispute. The skill
 - Refusing to calculate because the likely dispute value was not provided.
 - Treating contract value and likely dispute value as interchangeable without flagging the proxy.
 - Omitting the assumption statement.
+- Treating query URLs or share URLs as guaranteed machine-result endpoints.
 
 ## Pass criteria
-The proxy assumption is stated. The calculation proceeds. No unnecessary threshold question is asked.
+The proxy assumption is stated. Two-path logic is followed. The calculation proceeds. No unnecessary threshold question is asked.
 
 ---
 
@@ -900,7 +910,7 @@ The proxy assumption is stated. The calculation proceeds. No unnecessary thresho
 We have a supply contract between a Polish and a German company worth PLN 5 million. We are considering ICC or DELOS. What would the estimated fees be?
 
 ## Expected behaviour
-PLN is not a supported calculator currency. The skill identifies EUR as the most reasonable supported currency for a Polish/German context, converts or notes the equivalent amount in EUR at a stated approximate rate or notes that conversion is required, and proceeds with EUR as the input currency. It states the assumption clearly. It does not refuse to calculate because PLN is not supported.
+PLN is not a supported calculator currency. The skill identifies EUR as the most reasonable supported currency for a Polish/German context, notes the conversion assumption, and proceeds to calculate or direct using the Arbitration Costs Calculator in EUR. It first attempts direct calculation from the machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/). If not possible, it directs to the human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/) with the inputs. It does not refuse to calculate because PLN is not supported.
 
 ## Output should include
 - Statement that PLN is not a supported calculator currency and that EUR has been used as the most reasonable equivalent.
@@ -913,9 +923,10 @@ PLN is not a supported calculator currency. The skill identifies EUR as the most
 - Refusing to calculate because PLN is not supported.
 - Using PLN figures in the calculator without noting the currency limitation.
 - Choosing USD or another currency without explaining why EUR is more appropriate for this context.
+- Treating query URLs or share URLs as guaranteed machine-result endpoints.
 
 ## Pass criteria
-EUR is selected as the most reasonable supported currency. The assumption is stated. The calculation proceeds. The output remains useful.
+EUR is selected as the most reasonable supported currency. The assumption is stated. Two-path logic is followed. The calculation proceeds. The output remains useful.
 
 ---
 
@@ -925,7 +936,7 @@ EUR is selected as the most reasonable supported currency. The assumption is sta
 We have a contract worth 10 million. We are thinking of HKIAC arbitration. What would the fees be?
 
 ## Expected behaviour
-The amount is given without a currency. There is no other contextual information (no parties identified, no governing law, no seat, no sector) from which the currency can reasonably be inferred. The skill asks for the currency before calculating. It does not guess or default to USD or any other currency without basis.
+The amount is given without a currency. There is no other contextual information (no parties identified, no governing law, no seat, no sector) from which the currency can reasonably be inferred. The skill asks for the currency before calculating. It does not guess or default to USD or any other currency without basis. Once the currency is provided, the skill follows the two-path logic: direct calculation from the machine-readable specification page if possible, otherwise the human-facing calculator page with stated inputs.
 
 ## Output should include
 - A brief, targeted question asking for the currency of the contract value.
@@ -936,6 +947,7 @@ The amount is given without a currency. There is no other contextual information
 - Defaulting to any currency without a stated basis.
 - Producing a cost estimate without knowing the currency.
 - Asking multiple questions when currency is the only missing item.
+- Treating query URLs or share URLs as guaranteed machine-result endpoints once currency is provided.
 
 ## Pass criteria
 The skill asks for the currency and explains why. It does not proceed with an assumed currency where none can be inferred.

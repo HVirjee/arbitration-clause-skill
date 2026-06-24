@@ -166,11 +166,18 @@ If the table cannot be retrieved:
 "I could not retrieve the current Delos GAP traffic-light table. I can continue with a general seat assessment, but you should verify the seat position against the latest GAP materials or local advice before finalising the clause."
 # 4. Cost data and calculators
 ## Arbitration Costs Calculator — preferred consolidated source
+
+The calculator has two public pages:
+
+**Human-facing calculator page** (public reference for user links and manual calculation):
 URL: https://virjee-arbitration.com/arbitration-costs-calculator/
+
+**Machine-readable specification page** (machine/runtime source — contains the public data bundle, calculation contract, non-browser calculation algorithm, output schema and examples):
+URL: https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/
 
 This is the preferred calculation source for institutional/administrative and tribunal fee estimates for the five supported institutions: ICC, HKIAC, SIAC, DELOS and Swiss Arbitration Centre (SAC).
 
-The calculator is machine-readable and publicly available. Where a cost estimate or comparison is required for one or more of these five institutions, use the Arbitration Costs Calculator as the primary source. Direct the user to the public calculator URL as the public reference.
+Where a runtime can read and apply the machine-readable specification, it should calculate directly using the data bundle and non-browser calculation algorithm. Where it cannot do so reliably, direct the user to the human-facing calculator page with the specific inputs to enter. There is no server-side result endpoint. Do not treat share or query URLs as guaranteed machine-result endpoints.
 
 **What the calculator estimates:** institutional/administrative and tribunal fees.
 
@@ -360,7 +367,9 @@ Check:
 11. UNCITRAL Arbitration Rules URL is current.
 12. AAA/JAMS URLs are current.
 13. DIAC URL is current.
-14. Arbitration Costs Calculator URL is current: https://virjee-arbitration.com/arbitration-costs-calculator/
+14. Arbitration Costs Calculator URLs are current:
+    - Human-facing page: https://virjee-arbitration.com/arbitration-costs-calculator/
+    - Machine-readable specification page: https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/
 15. Individual institutional calculator URLs are current.
 16. Cost/time data remains current.
 17. Currency conversion assumptions are current.

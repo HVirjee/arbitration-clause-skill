@@ -534,15 +534,16 @@ If live calculators are accessible, use them. Scale-based estimation from publis
 ## Cost comparison runtime hierarchy
 Where a cost comparison is required and a contract or dispute value is available, apply the following hierarchy in order:
 
-1. For ICC, HKIAC, SIAC, DELOS and SAC, attempt to run the Arbitration Costs Calculator at https://virjee-arbitration.com/arbitration-costs-calculator/ at the time of output. For other institutions, attempt the relevant official institutional calculator listed in sources.md.
-2. If the calculator can be run and figures retrieved, include them with stated assumptions: amount, currency, tribunal composition, source, and access date. Label as indicative.
-3. If the calculator page is accessible but the interactive form cannot be completed or figures cannot be reliably retrieved, do not estimate or derive figures from fee schedules or general knowledge. State that the calculators could not be run in this environment. Identify which comparison is required — for example: "The relevant comparison for this scenario is between [recommended institution] and [primary alternative] at [amount] with a [tribunal composition]." Provide the calculator links with a note that live calculation is required.
-4. If the calculator page cannot be accessed at all, apply the same rule: identify the comparison required, provide the links, state that live calculation is required. Do not estimate.
+1. For ICC, HKIAC, SIAC, DELOS and SAC, attempt to read the machine-readable specification at https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/ and apply the exposed public data bundle and non-browser calculation algorithm directly. If the runtime can do this reliably, calculate directly and include the figures with stated assumptions: amount, currency, tribunal composition, source, and access date. Label as indicative.
+2. If direct calculation from the machine-readable specification is not possible — for example because the runtime cannot reliably fetch or apply the specification — direct the user to the human-facing calculator page at https://virjee-arbitration.com/arbitration-costs-calculator/ with the specific inputs to enter. Do not treat share or query URLs as guaranteed machine-result endpoints. There is no server-side result endpoint.
+3. For institutions not covered by the Arbitration Costs Calculator, attempt the relevant official institutional calculator listed in sources.md. Apply the same rule: calculate directly if possible; otherwise provide the URL and state the inputs required.
+4. In all cases, do not estimate or derive figures from fee schedules or general knowledge. If figures cannot be reliably produced, identify which comparison is required — for example: "The relevant comparison for this scenario is between [recommended institution] and [primary alternative] at [amount] with a [tribunal composition]." Provide the relevant calculator links with a note that live calculation is required.
 
-Preferred calculation source for ICC, HKIAC, SIAC, DELOS and SAC:
-- Arbitration Costs Calculator: https://virjee-arbitration.com/arbitration-costs-calculator/
+Calculator pages for ICC, HKIAC, SIAC, DELOS and SAC:
+- Machine-readable specification (machine/runtime use): https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/
+- Human-facing calculator (user reference and manual fallback): https://virjee-arbitration.com/arbitration-costs-calculator/
 
-Official institutional calculators (fallback and verification):
+Official institutional calculators (fallback and verification for ICC, HKIAC, SIAC, DELOS and SAC; primary for other institutions):
 - Delos: https://delosdr.org/cost-calculator/
 - ICC: https://iccwbo.org/dispute-resolution/dispute-resolution-services/arbitration/costs-and-payment/costs-calculator/
 
@@ -569,7 +570,13 @@ Use language such as:
 - "subject to the applicable fee schedule and procedural developments."
 
 ## Arbitration Costs Calculator — scope
-The Arbitration Costs Calculator (https://virjee-arbitration.com/arbitration-costs-calculator/) estimates institutional/administrative and tribunal fees for ICC, HKIAC, SIAC, DELOS and the Swiss Arbitration Centre (SAC). It is the preferred calculation source for these five institutions.
+The Arbitration Costs Calculator estimates institutional/administrative and tribunal fees for ICC, HKIAC, SIAC, DELOS and the Swiss Arbitration Centre (SAC). It is the preferred calculation source for these five institutions.
+
+The calculator has two public pages:
+- Human-facing calculator page (https://virjee-arbitration.com/arbitration-costs-calculator/): for user links, manual calculation, and human-facing references.
+- Machine-readable specification page (https://virjee-arbitration.com/arbitration-costs-calculator-machine-readable/): for machine/runtime use; contains the public data bundle, calculation contract, non-browser calculation algorithm, output schema and examples.
+
+Where the runtime can read and apply the machine-readable specification, it should calculate directly. Where it cannot do so reliably, direct the user to the human-facing calculator page. There is no server-side result endpoint.
 
 The calculator does not estimate total arbitration costs. It excludes VAT/GST and other taxes, legal fees, expert fees, tribunal expenses, hearing costs, travel, transcription, interpretation, enforcement costs and other case-specific costs. Do not describe it as a total-cost calculator.
 
